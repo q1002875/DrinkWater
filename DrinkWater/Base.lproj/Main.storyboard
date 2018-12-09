@@ -44,18 +44,115 @@
         <!--提醒喝水-->
         <scene sceneID="2dj-w9-4Tl">
             <objects>
-                <viewController id="Pfz-tx-9U2" customClass="DrinkRemindViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrinkRemind" id="Pfz-tx-9U2" customClass="DrinkRemindViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQv-5F-VFr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HQj-TC-wyM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="109" id="jvR-gB-OwR" customClass="RemindCell" customModule="DrinkWater" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="109"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jvR-gB-OwR" id="FAP-x2-W1f">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="108.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dB-bb-F1P">
+                                                    <rect key="frame" x="275" y="39" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTF-i3-Lml">
+                                                    <rect key="frame" x="15" y="11" width="207" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YTF-i3-Lml" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" id="3Z4-4B-5Mb"/>
+                                                <constraint firstItem="YTF-i3-Lml" firstAttribute="bottom" secondItem="FAP-x2-W1f" secondAttribute="bottomMargin" id="RSm-yE-Cei"/>
+                                                <constraint firstItem="1dB-bb-F1P" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" constant="28" id="VxB-fA-VQc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="1dB-bb-F1P" secondAttribute="bottom" constant="28" id="fq9-rP-UDO"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1dB-bb-F1P" secondAttribute="trailing" constant="10" id="jO9-eo-gol"/>
+                                                <constraint firstItem="YTF-i3-Lml" firstAttribute="leading" secondItem="FAP-x2-W1f" secondAttribute="leadingMargin" id="pay-a2-7mb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Remid" destination="1dB-bb-F1P" id="GCj-nf-pqJ"/>
+                                            <outlet property="Time" destination="YTF-i3-Lml" id="HPY-57-Aan"/>
+                                            <segue destination="nzi-wT-QTC" kind="show" identifier="show" id="qjE-7v-e9Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pfz-tx-9U2" id="gBs-5b-Ra6"/>
+                                    <outlet property="delegate" destination="Pfz-tx-9U2" id="SLe-Uu-Pmw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="bottom" secondItem="06e-IF-14x" secondAttribute="bottom" id="GW2-lT-QfX"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="trailing" secondItem="06e-IF-14x" secondAttribute="trailing" id="ZlV-0K-tTK"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="bottom" secondItem="06e-IF-14x" secondAttribute="bottom" id="bj3-CU-LjQ"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="top" secondItem="06e-IF-14x" secondAttribute="top" id="f0C-2D-i6q"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="leading" secondItem="06e-IF-14x" secondAttribute="leading" id="n4z-ms-nMb"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="trailing" secondItem="06e-IF-14x" secondAttribute="trailing" id="otg-ad-7SC"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="leading" secondItem="06e-IF-14x" secondAttribute="leading" id="q6Y-iq-008"/>
+                            <constraint firstItem="HQj-TC-wyM" firstAttribute="top" secondItem="06e-IF-14x" secondAttribute="top" id="qiE-dP-9ht"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="06e-IF-14x"/>
                     </view>
-                    <navigationItem key="navigationItem" title="提醒喝水" id="izr-Sj-s4w"/>
+                    <navigationItem key="navigationItem" title="提醒喝水" id="izr-Sj-s4w">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qno-s0-X0X">
+                            <connections>
+                                <action selector="add:" destination="Pfz-tx-9U2" id="8pB-je-5Za"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableview" destination="HQj-TC-wyM" id="pVI-h1-gnF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPx-6d-UHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2632.8000000000002" y="1549.4752623688157"/>
+        </scene>
+        <!--Set Time View Controller-->
+        <scene sceneID="3qf-Gi-yJV">
+            <objects>
+                <viewController id="nzi-wT-QTC" customClass="SetTimeViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qxt-vb-iCG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Sj5-oY-Zqe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="302"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="566024224.73419905">
+                                    <!--2018-12-09 04:57:04 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hyt-70-nnf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Lm-h4-ZLA">
+                        <barButtonItem key="rightBarButtonItem" title="儲存" id="k3X-k5-MOm">
+                            <connections>
+                                <action selector="done:" destination="nzi-wT-QTC" id="TAi-hb-PLN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pickdate" destination="Sj5-oY-Zqe" id="UNv-h1-bUj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yob-P0-o6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3384.8000000000002" y="1548.5757121439281"/>
         </scene>
         <!--鄰近喝水-->
         <scene sceneID="NyO-77-npQ">
@@ -64,10 +161,24 @@
                     <view key="view" contentMode="scaleToFill" id="8c4-6J-Viy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mFw-xb-NmI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mFw-xb-NmI" firstAttribute="trailing" secondItem="R8N-7x-nEy" secondAttribute="trailing" id="92a-lb-0dR"/>
+                            <constraint firstItem="mFw-xb-NmI" firstAttribute="leading" secondItem="R8N-7x-nEy" secondAttribute="leading" id="Thd-TG-Mtb"/>
+                            <constraint firstItem="mFw-xb-NmI" firstAttribute="bottom" secondItem="R8N-7x-nEy" secondAttribute="bottom" id="gCK-Ad-942"/>
+                            <constraint firstItem="mFw-xb-NmI" firstAttribute="top" secondItem="R8N-7x-nEy" secondAttribute="top" id="mdP-Ah-3Fn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R8N-7x-nEy"/>
                     </view>
                     <navigationItem key="navigationItem" title="鄰近喝水" id="ija-rf-t9R"/>
+                    <connections>
+                        <outlet property="mainMapView" destination="mFw-xb-NmI" id="SjO-q9-WPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15V-Hv-QRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +190,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="t4a-8N-i2w" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FWn-og-UwM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -7,24 +7,114 @@
 //
 
 import UIKit
+import CoreData
+class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,UITableViewDelegate,UITableViewDataSource {
 
-class DrinkRemindViewController: UIViewController {
+        var data:[DrinkModel] = []
+        
+    @IBOutlet weak var tableview: UITableView!
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return data.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RemindCell
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+            let product = data[indexPath.row]
+           cell.setProduct(drink: product)
+            return cell
+            
+        }
+        
+        
+    @IBAction func add(_ sender: Any) {
+        
+        let moc = CoreDataHelper.shared.managedObjectContext()
+        let note = DrinkModel(context: moc)
+        note.drinktime = "New Time"
+        data.insert(note, at: 0)
+        let indexpath = IndexPath(row: 0, section: 0)
+        tableview.insertRows(at: [indexpath], with: .automatic)
+        savetodata()
     }
     
+        
+        override func setEditing(_ editing: Bool, animated: Bool) {
+            super.setEditing(editing, animated: animated)
+            self.tableview.setEditing(editing, animated: animated)
+            
+            
+        }
+        
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            
+            let note = data.remove(at: indexPath.row)
+            CoreDataHelper.shared.managedObjectContext().delete(note)
+            let indexpath = IndexPath(row:indexPath.row , section: 0)
+            tableview.deleteRows(at: [indexpath], with: .automatic)
+            savetodata()
+        }
+        
+        func savetodata(){
+            CoreDataHelper.shared.saveContext()
+            
+        }
+        func loadfromdata(){
+            let moc = CoreDataHelper.shared.managedObjectContext()
+            
+            let fetch = NSFetchRequest<DrinkModel>(entityName: "Water")
+            
+            moc.performAndWait {
+                do{
+                    let result = try  moc.fetch(fetch)
+                    data = result
+                }catch{}
+                
+            }
+            
+            
+        }
+        
+        
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "show"{
+                if let noteVC = segue.destination as? SetTimeViewController {
 
-    /*
-    // MARK: - Navigation
+                    if let indexpath = tableview.indexPathForSelectedRow{
+                        noteVC.currentTime = data[indexpath.row]
+                        
+                        noteVC.delegate = self
+                    }
+                    
+                }
+                
+            }
+            
+            
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        func didfinishupdata(note:DrinkModel){
+            if let index =  data.firstIndex(of: note){
+                
+                let indexpath = IndexPath(row: index, section: 0)
+                
+                tableview.reloadRows(at: [indexpath], with: .automatic)
+                savetodata()
+            }
+            
+            
+        }
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            loadfromdata()
+            navigationItem.leftBarButtonItem = self.editButtonItem
+        }
+        
+        
 }
+
+

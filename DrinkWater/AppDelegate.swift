@@ -7,15 +7,37 @@
 //
 
 import UIKit
-
+import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    let center = UNUserNotificationCenter.current()
+    let notificationDelegate = DemoNotificationDelegate()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        center.delegate = notificationDelegate
+        
+        // MARK: set authorization
+        let options: UNAuthorizationOptions = [.badge, .sound, .alert]
+        center.getNotificationSettings { ( settings ) in
+            switch settings.authorizationStatus {
+            case .notDetermined:
+                self.center.requestAuthorization(options: options) {
+                    (granted, error) in
+                    if !granted {
+                        print("Something went wrong")
+                    }
+                }
+            case .authorized:
+                DispatchQueue.main.async(execute: {
+                    UIApplication.shared.registerForRemoteNotifications()
+                })
+            case .denied:
+                print("cannot use notifications cuz the user has denied permissions")
+            case .provisional:
+                print("asd")
+            }
+        }
         return true
     }
 
