@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let center = UNUserNotificationCenter.current()
+    
+    // delegate for receiving or delivering notification
     let notificationDelegate = DemoNotificationDelegate()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         center.delegate = notificationDelegate
@@ -38,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("asd")
             }
         }
+
         return true
     }
 

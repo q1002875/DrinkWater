@@ -9,215 +9,153 @@
 import UIKit
 import MapKit
 import CoreLocation
-class SearchDrinkViewController: UIViewController {
 
-    @IBOutlet weak var mainMapView: MKMapView!
+struct name:Decodable {
+    let 地址 :String
+    let 飲水點名稱:String
+    let 飲水機所在地:String
     
+}
+class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+    var address : [String] = []
+    var drinkname : [String] = []
+    var drinkpoint : [String] = []
+    
+    @IBOutlet weak var mainMapView: MKMapView!
+    //使用位置管理器獲取用戶位置
     let locationManager = CLLocationManager()
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+       
+        
+    }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//        let capital = view.annotation as! Capital
+//        let placeName = capital.title
+//        let placeInfo = capital.info
+//
+//        let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "OK", style: .default))
+//        present(ac, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let url = URL(string: "http://opendata.hccg.gov.tw/dataset/64cb7d6d-692e-4312-a4a5-931b902680d5/resource/9fcbba71-4e28-47c3-8d29-6e85c24e3415/download/20171206102431392.json"){
+            
+            let session = URLSession.shared
+            let request = URLRequest(url:url)
+            let task = session.dataTask(with: request) { (data, response, error) in
+                do{
+                    let address = try JSONDecoder().decode([name].self, from: data!)
+                    
+                    for countr in address{
+                        
+                        self.address.append(countr.地址)
+                        self.drinkname.append(countr.飲水點名稱)
+                        self.drinkpoint.append(countr.飲水機所在地)
+                    }
+                
+                    for index in 0...self.address.count-1{
+                        let geoCoder = CLGeocoder()
+                        geoCoder.geocodeAddressString(self.address[index], completionHandler: {
+                            placemarks, error in
+                            if error != nil {
+                                print("\(String(describing: error))")
+                                return
+                            }
+                            if let placemarks = placemarks {
+                                // 取得第一個座標
+                                let placemark = placemarks[0]
+                                // 加上地圖標註
+                                let annotation = MKPointAnnotation()
+                                annotation.title = self.drinkpoint[index]
+                                annotation.subtitle = self.drinkname[index]
+                                if let location = placemark.location {
+                                    // 顯示標註
+                                    annotation.coordinate = location.coordinate
+                                    
+                                    self.mainMapView.showAnnotations([annotation], animated: true)
+                                    self.mainMapView.selectAnnotation(annotation, animated: true)
+                                    
+                                }
+                            }
+                        })
+                        
+                    }
+                }catch{
+                    print("\(error)")
+                    
+                }
+            }
+            task.resume()
+        }
+        
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        mainMapView.showsUserLocation = true
         mainMapView.delegate = self
         
-        //檢查user是否有啟動定位服務
-        
-        //guard如果成立就過關不成立就出去
-        guard CLLocationManager.locationServicesEnabled() else{
-            //沒有的話給些提示
-            
-            return
-        }
-        
-        
-        //取得user授權
         locationManager.delegate = self
-        locationManager.requestAlwaysAuthorization()
         
-        //期待的精確度 越精確躍耗電
+        //最好的精確度
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.activityType = .automotiveNavigation
+        //取得用戶授權
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        //取得背景多工持續取的位置
-        locationManager.allowsBackgroundLocationUpdates = true
-     
+        
+        //開始放大地圖畫面
+        let latitude :CLLocationDegrees = 23.702290
+        let longitude:CLLocationDegrees = 120.537034
+        
+        let latDleta :CLLocationDegrees = 0.0005
+        let lotDleta :CLLocationDegrees = 0.0005
+        
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDleta, longitudeDelta: lotDleta)
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+        
+        mainMapView.setRegion(region, animated: true)
+        
+        
+   
     }
+   
     
-    //ram不夠會通知這個方法釋放記憶體
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+ 
     
-    
-    //比viewdidload畫面出現後去做的
-    //移動地圖兼放大
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        moveAndZoomMap()
-    }
-    
-    func moveAndZoomMap(){
-        //拿到位置
-        guard let location = locationManager.location else{
-            print("Location is not ready")
-            return
-        }
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-        //span決定縮放大小
-        let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mainMapView.setRegion(region, animated: true)
-        
-        //add annotation
-        
-        var storeCoordinate = location.coordinate
-        storeCoordinate.latitude += 0.005
-        
-        storeCoordinate.longitude += 0.005
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = storeCoordinate
-        annotation.title = "肯德基"
-        annotation.subtitle = "真好吃"
-        mainMapView.addAnnotation(annotation)
-        
-    }
-
-
-}
-extension SearchDrinkViewController: CLLocationManagerDelegate{
-    
-    //mark:cllocationmanagerdelegate methods
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        guard let coordinate = locations.last?.coordinate else {
-            assertionFailure("Invalid location or coordinate")
-            return
-        }
-        print("Current location:\(coordinate.latitude),\(coordinate.longitude)")
-    }
-    
-}
-
-
-extension SearchDrinkViewController:MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        let coordinate = mapView.region.center
-        print("Map center moved to : \(coordinate.latitude),\(coordinate.longitude)")
+        //持續更新user位置
+//        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//            let userLocation :CLLocation = locations[0]
+//            
+//            let latitude : CLLocationDegrees = userLocation.coordinate.latitude
+//            let longitude : CLLocationDegrees = userLocation.coordinate.longitude
+//            
+//            let span :MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+//            
+//            let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//            
+//            let region :MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+//            mainMapView.setRegion(region, animated: true)
+//            
+//        }
     }
     
     
-    //回復舊版大頭針
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        //維持藍點點
-        if annotation is MKUserLocation{
-            return nil
-        }
-        let storeID = "store"
-        //        var result = mapView.dequeueReusableAnnotationView(withIdentifier: storeID)as? MKPinAnnotationView克制自己的圖案
-        var result = mapView.dequeueReusableAnnotationView(withIdentifier: storeID)
-        if result == nil {
-            //            result = MKPinAnnotationView(annotation: annotation, reuseIdentifier: storeID)
-            result = MKAnnotationView(annotation: annotation, reuseIdentifier: storeID)
-        }else{
-            result?.annotation = annotation
-        }
-        
-        //解除canShowCallout
-        result?.canShowCallout = true
-        //        result?.animatesDrop = true
-        //        result?.pinTintColor = .purple
-        
-        //show image
-        
-        let image = UIImage(named: "pointRed.png")
-        result?.image = image
-        
-        
-        let imageview = UIImageView(image: image)
-        result?.leftCalloutAccessoryView = imageview
-        
-        //right-callout accessory view
-        let calloutBtn = UIButton(type: .detailDisclosure)
-        calloutBtn.addTarget(self, action: #selector(calloutbtnPressed(sender:)), for: .touchUpInside)
-        result?.rightCalloutAccessoryView = calloutBtn
-        return result
-    }
-    //點泡泡
-    @objc
-    func calloutbtnPressed(sender:Any){
-        //        print("calloutbtnpressed executed.")
-        
-        let alert = UIAlertController(title: nil, message: "導航前往這個地點?", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default){(action) in
-            self.navigateHome()
-            
-        }
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        present(alert,animated: true)
-        
-        
-    }
     
-    //經緯度轉住址
-    func navigateHome(){
-        let target = "新竹縣新豐鄉山崎村信義街18巷24號"
-        let geocoder1 = CLGeocoder()
-        
-        //address - >lat/lon住址查經緯
-        
-        geocoder1.geocodeAddressString(target){(placemarks ,error) in
-            if let error = error {
-                print("geocodeaddressString:fail\(error)")
-                return
-                
-            }
-            guard let placemark = placemarks?.first,
-                let coordinate = placemark.location?.coordinate else{
-                    assertionFailure("placemark id empty or nil")
-                    return
-                    
-            }
-            print("My Home\(coordinate.latitude),\(coordinate.longitude)")
-            
-            //prepare source map item
-            let sourcecoordinate = CLLocationCoordinate2DMake(24.79898676474714, 120.98698700000018)
-            let sourdePlacemark = MKPlacemark(coordinate: sourcecoordinate)
-            let sourceMapItem = MKMapItem(placemark: sourdePlacemark)
-            
-            //prepare taarget map item導航
-            let targetPlacemark = MKPlacemark(placemark: placemark)
-            let targetMapItem = MKMapItem(placemark: targetPlacemark)
-            //設為步行driving
-            let options = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving]
-            //            targetMapItem.openInMaps(launchOptions: options)
-            
-            //兩點的路徑距離
-            MKMapItem.openMaps(with: [sourceMapItem,targetMapItem], launchOptions: options)
-        }
-        
-        //address - >lon/lat住址茶經緯
-        let geocoder2 = CLGeocoder()
-        let location = CLLocation(latitude: 24.874782, longitude: 120.998108)
-        geocoder2.reverseGeocodeLocation(location){(placemarks,error) in
-            if let error = error {
-                print("geocodeaddressString:fail\(error)")
-                return
-                
-            }
-            guard let placemark = placemarks?.first,
-                let postalcode = placemark.postalCode,
-                let thoroughfare = placemark.thoroughfare
-                else{
-                    assertionFailure("placemark id empty or nil")
-                    return
-                    
-            }
-            print("placemark:\(placemark.description),postalcode:\(postalcode),thoroughfare:\(thoroughfare)")
-        }
-    }
+    
+    
+    
     
 }

@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 class DrinkModel:NSManagedObject{
     
-    
+    @NSManaged var saveuuid : String?
     @NSManaged var drinktime : String?
 
 }

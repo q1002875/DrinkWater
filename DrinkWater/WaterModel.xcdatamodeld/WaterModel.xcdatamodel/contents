@@ -2,8 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Water" representedClassName=".DrinkModel" syncable="YES">
         <attribute name="drinktime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="saveuuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Water" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="Water" positionX="-54" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

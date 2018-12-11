@@ -21,7 +21,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RemindCell
 
             let product = data[indexPath.row]
-           cell.setProduct(drink: product)
+            cell.setProduct(drink: product)
             return cell
             
         }
@@ -30,9 +30,9 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     @IBAction func add(_ sender: Any) {
         
         let moc = CoreDataHelper.shared.managedObjectContext()
-        let note = DrinkModel(context: moc)
-        note.drinktime = "New Time"
-        data.insert(note, at: 0)
+        let water = DrinkModel(context: moc)
+        water.drinktime = "New Time"
+        data.insert(water, at: 0)
         let indexpath = IndexPath(row: 0, section: 0)
         tableview.insertRows(at: [indexpath], with: .automatic)
         savetodata()
@@ -79,12 +79,12 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "show"{
-                if let noteVC = segue.destination as? SetTimeViewController {
+                if let whater = segue.destination as? SetTimeViewController {
 
                     if let indexpath = tableview.indexPathForSelectedRow{
-                        noteVC.currentTime = data[indexpath.row]
+                        whater.currentTime = data[indexpath.row]
                         
-                        noteVC.delegate = self
+                        whater.delegate = self
                     }
                     
                 }
