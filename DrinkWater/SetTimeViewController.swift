@@ -11,9 +11,8 @@ import UserNotifications
 protocol SetTimeViewControllerdelegate:class {
     func didfinishupdata(note:DrinkModel)
     
-
-  
 }
+
 class SetTimeViewController: UIViewController {
 
    weak var delegate :SetTimeViewControllerdelegate?
@@ -24,6 +23,7 @@ class SetTimeViewController: UIViewController {
         let format = DateFormatter()
         format.dateFormat = "HH:mm"
         currentTime?.drinktime = format.string(from: pickdate.date)
+        print(currentTime.drinktime)
         let content = UNMutableNotificationContent()
         content.title = "補充水分的時間到囉!!!"
         content.body = ""
@@ -37,54 +37,21 @@ class SetTimeViewController: UIViewController {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         currentTime.saveuuid = uuid
         
+        
         self.delegate?.didfinishupdata(note: currentTime)
-//          navigationController?.popViewController(animated: true)
+          navigationController?.popViewController(animated: true)
         
         
     }
    
-    @IBAction func `switch`(_ sender: UISwitch) {
-        if sender.isOn == false{ UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
-            var identifiers: [String] = []
-            for notification:UNNotificationRequest in notificationRequests {
-                if notification.identifier == self.currentTime.saveuuid {
-                    identifiers.append(notification.identifier)
-                }
-            }
-            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
-            //取消特定通知
-        }
-        }else{
-            let format = DateFormatter()
-            format.dateFormat = "HH:mm"
-            currentTime?.drinktime = format.string(from: pickdate.date)
-            let content = UNMutableNotificationContent()
-            content.title = "補充水分的時間到囉!!!"
-            content.body = ""
-            content.sound = UNNotificationSound.defaultCritical
-            content.badge = NSNumber(integerLiteral: UIApplication.shared.applicationIconBadgeNumber + 1)
-            let uuid = UUID().uuidString
-            let date = pickdate.date
-            let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date)
-            let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-            let request = UNNotificationRequest(identifier:uuid, content: content, trigger: trigger)
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-            currentTime.saveuuid = uuid
-            
-            self.delegate?.didfinishupdata(note: currentTime)
-        }
-    }
-    
-    
-    
+
     
 
-
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         pickdate.datePickerMode = .time
   
+        
     }
     
 

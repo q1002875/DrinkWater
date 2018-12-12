@@ -61,6 +61,8 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     }
     @objc func buttonTapped(sender:UIButton!)
     {
+     
+        
         
         let alert = UIAlertController(title: nil, message: "導航前往這個地點?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default){(action) in

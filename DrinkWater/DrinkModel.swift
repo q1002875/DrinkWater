@@ -13,5 +13,5 @@ class DrinkModel:NSManagedObject{
     
     @NSManaged var saveuuid : String?
     @NSManaged var drinktime : String?
-
+    var switc : Bool?
 }

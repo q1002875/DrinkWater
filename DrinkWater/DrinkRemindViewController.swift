@@ -8,10 +8,19 @@
 
 import UIKit
 import CoreData
-class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,UITableViewDelegate,UITableViewDataSource {
+
+import UserNotifications
+class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,UITableViewDelegate,UITableViewDataSource,RemindCelldelegate {
+
+    var cellremind:DrinkModel!
 
         var data:[DrinkModel] = []
-        
+    func didcousmtswitch(cell: RemindCell) {
+        if let indexpath = tableview.indexPath(for: cell){
+            self.data[indexpath.row].switc = cell.Remid.isOn
+     
+        }
+    }
     @IBOutlet weak var tableview: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return data.count
@@ -19,13 +28,20 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RemindCell
-
+     //位置
+              cell.remindtime = data[indexPath.row]
+            self.cellremind = cell.remindtime
             let product = data[indexPath.row]
+            
             cell.setProduct(drink: product)
+            
             return cell
             
         }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
+    }
         
     @IBAction func add(_ sender: Any) {
         
@@ -35,6 +51,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         data.insert(water, at: 0)
         let indexpath = IndexPath(row: 0, section: 0)
         tableview.insertRows(at: [indexpath], with: .automatic)
+        water.switc = true
         savetodata()
     }
     
@@ -45,14 +62,29 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
             
             
         }
-        
+    
+    //要再修改
         func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-            
+            if editingStyle == .delete{
+          
+                UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+                    var identifiers: [String] = []
+                    for notification:UNNotificationRequest in notificationRequests {
+                        if notification.identifier == self.cellremind.saveuuid{
+                            identifiers.append(notification.identifier)
+                        }
+                    }
+                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+                }
+                
             let note = data.remove(at: indexPath.row)
             CoreDataHelper.shared.managedObjectContext().delete(note)
             let indexpath = IndexPath(row:indexPath.row , section: 0)
             tableview.deleteRows(at: [indexpath], with: .automatic)
             savetodata()
+            
+                
+            }
         }
         
         func savetodata(){
@@ -76,15 +108,16 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         }
         
         
-        
+    
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "show"{
                 if let whater = segue.destination as? SetTimeViewController {
-
+//要傳到class裡面
                     if let indexpath = tableview.indexPathForSelectedRow{
                         whater.currentTime = data[indexpath.row]
                         
                         whater.delegate = self
+                        
                     }
                     
                 }
@@ -96,13 +129,13 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
 
         func didfinishupdata(note:DrinkModel){
             if let index =  data.firstIndex(of: note){
-                
+               
                 let indexpath = IndexPath(row: index, section: 0)
                 
                 tableview.reloadRows(at: [indexpath], with: .automatic)
                 savetodata()
             }
-            
+           
             
         }
         
