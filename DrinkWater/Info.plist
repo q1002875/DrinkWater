@@ -52,5 +52,22 @@
         <true/>
         
     </dict>
+    
+    
+    <key>Fabric</key>
+    <dict>
+        <key>APIKey</key>
+        <string>753353372d7ffbb80ab6ea8da8e73fedcfe36634</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict/>
+                <key>KitName</key>
+                <string>Crashlytics</string>
+            </dict>
+        </array>
+    </dict>
+    
 </dict>
 </plist>

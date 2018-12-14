@@ -17,6 +17,7 @@ struct name:Decodable {
     
 }
 class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+    
     var address : [String] = []
     var drinkname : [String] = []
     var drinkpoint : [String] = []
@@ -24,8 +25,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     @IBOutlet weak var mainMapView: MKMapView!
     //使用位置管理器獲取用戶位置
     let locationManager = CLLocationManager()
-    
-  
+   
     //按鈕設置
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
       
@@ -153,10 +153,9 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
                                 if let location = placemark.location {
                                     // 顯示標註
                                     annotation.coordinate = location.coordinate
-                                    
+                                    //存到一個地方再一次show
                                     self.mainMapView.showAnnotations([annotation], animated: true)
-                                    self.mainMapView.selectAnnotation(annotation, animated: true)
-                                    
+                                    self.mainMapView.selectAnnotation(annotation, animated: true)   
                                 }
                             }
                         })
@@ -199,8 +198,8 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         let latitude :CLLocationDegrees = 23.702290
         let longitude:CLLocationDegrees = 120.537034
         
-        let latDleta :CLLocationDegrees = 0.0005
-        let lotDleta :CLLocationDegrees = 0.0005
+        let latDleta :CLLocationDegrees = 0.5
+        let lotDleta :CLLocationDegrees = 0.5
         
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDleta, longitudeDelta: lotDleta)
         
@@ -214,33 +213,5 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
    
     }
    
-    
- 
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//
-//        持續更新user位置
-//        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//            let userLocation :CLLocation = locations[0]
-//
-//            let latitude : CLLocationDegrees = userLocation.coordinate.latitude
-//            let longitude : CLLocationDegrees = userLocation.coordinate.longitude
-//
-//            let span :MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-//
-//            let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-//
-//            let region :MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
-//            mainMapView.setRegion(region, animated: true)
-//
-//        }
-//    }
-    
-    
-    
-    
-    
-    
     
 }

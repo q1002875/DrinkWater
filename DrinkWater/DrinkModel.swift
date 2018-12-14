@@ -13,5 +13,11 @@ class DrinkModel:NSManagedObject{
     
     @NSManaged var saveuuid : String?
     @NSManaged var drinktime : String?
-    var switc : Bool?
+    @NSManaged var switc : NSNumber
+    override func awakeFromInsert() {
+        //設定
+        switc = NSNumber(booleanLiteral: true)
+        //取值
+//        switc?.boolValue
+    }
 }

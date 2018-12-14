@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 import UserNotifications
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // delegate for receiving or delivering notification
     let notificationDelegate = DemoNotificationDelegate()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+   print(NSHomeDirectory())
+           Fabric.with([Crashlytics.self])
         center.delegate = notificationDelegate
-        
         // MARK: set authorization
         let options: UNAuthorizationOptions = [.badge, .sound, .alert]
         center.getNotificationSettings { ( settings ) in

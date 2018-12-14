@@ -19,11 +19,15 @@ class RemindCell:UITableViewCell{
     @IBOutlet weak var Time: UILabel!
     var delegateswitch:RemindCelldelegate?
     @IBOutlet weak var Remid: UISwitch!
-    
+  
     @IBAction func switchchane(_ sender: UISwitch) {
         
         if sender.isOn == true{
             
+            let formatt = DateFormatter()
+            formatt.dateFormat = "HH:mm"
+            let newtime = "00:00"
+            let newdate = formatt.date(from: newtime)
             let format = DateFormatter()
             format.dateFormat = "HH:mm"
             if let time =  remindtime.drinktime{
@@ -35,12 +39,15 @@ class RemindCell:UITableViewCell{
                 content.badge = NSNumber(integerLiteral: UIApplication.shared.applicationIconBadgeNumber + 1)
                 let uuid = UUID().uuidString
                 
-                let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date!)
+                let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date ?? newdate!)
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-                let request = UNNotificationRequest(identifier:remindtime.saveuuid!, content: content, trigger: trigger)
+                let request = UNNotificationRequest(identifier:remindtime.saveuuid ?? "123", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-
+            
+               
+             
             }else{
+              
                 let format = DateFormatter()
                 format.dateFormat = "HH:mm"
                     let time = self.Time.text
@@ -51,14 +58,20 @@ class RemindCell:UITableViewCell{
                     content.sound = UNNotificationSound.defaultCritical
                     content.badge = NSNumber(integerLiteral: UIApplication.shared.applicationIconBadgeNumber + 1)
                     let uuid = UUID().uuidString
-                    
-                    let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date!)
+                 
+                let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date ?? newdate!)
                     let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-                    let request = UNNotificationRequest(identifier:remindtime.saveuuid!, content: content, trigger: trigger)
+                    let request = UNNotificationRequest(identifier:remindtime.saveuuid ?? "123", content: content, trigger: trigger)
                     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+               
+               
             }
-
+    remindtime.switc = NSNumber(booleanLiteral:true)
+            CoreDataHelper.shared.saveContext()
         }else{
+         
+        remindtime.switc = NSNumber(booleanLiteral:false)
+        
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
@@ -68,7 +81,9 @@ class RemindCell:UITableViewCell{
                 }
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
         }
+        CoreDataHelper.shared.saveContext()
         delegateswitch?.didcousmtswitch(cell: self)
+            
     }
     
     
@@ -79,9 +94,10 @@ class RemindCell:UITableViewCell{
         
  }
     func setProduct(drink:DrinkModel){
-
+     
         Time.text = drink.drinktime
-        
+        Remid.isOn = drink.switc.boolValue
+
     }
 
 

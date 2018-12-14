@@ -11,16 +11,16 @@
 		4376DA15ABD3DC301E8E5C1B9B06A619 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		4432F4D25B8AE0F7CA591E280EFE17B9 /* Pods-DrinkWaterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE98347B802005AA15D691A85E39C1F /* Pods-DrinkWaterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AC5606C581101E0E69DD652079D37BF /* Pods-DrinkWater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0313B77E644AEC199823C35CF90E2390 /* Pods-DrinkWater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B084FA2F9E86FE742D8444466FEC47A /* GDataXML-HTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2629F78E729A44DAAC3EA857B6F7DB /* GDataXML-HTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B084FA2F9E86FE742D8444466FEC47A /* GDataXML-HTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFF00CD481AFB79A5D11E94135C7B569 /* GDataXML-HTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4D566D05215FFF25F7B7DC9103C07D5 /* Pods-DrinkWaterUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 380DDE8471474CF37BEAA6EE7ED8A968 /* Pods-DrinkWaterUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A869FBBAB00618E617E5D9BBE212EE6B /* GDataXML-HTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D59E33483CDAFE56DFCB490869AE5D56 /* GDataXML-HTML-dummy.m */; };
-		AEB16EA0F02C816763F18C5CA9053812 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B937E57CC6483B66423935DC491B12 /* GDataXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A869FBBAB00618E617E5D9BBE212EE6B /* GDataXML-HTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C40DF09BD2B18420D5AECE1AB9781B /* GDataXML-HTML-dummy.m */; };
+		AEB16EA0F02C816763F18C5CA9053812 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E525C8DD98A2FDC4FAC8C6628E7C0557 /* GDataXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B70B1F84C15724D2AAF9A8B084A7D7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		C67D44BE52F3DD829382187ACD8C2443 /* Pods-DrinkWaterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137346B30C05B31FA81C86BB36AA519 /* Pods-DrinkWaterTests-dummy.m */; };
 		D1C05E456D30DD7C4458A9D6B5692B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		D3C4F1FE3787E0A5F3FB4E8D4BBD9ABE /* Pods-DrinkWater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE59F484FA883EFA1FD2EC063D573570 /* Pods-DrinkWater-dummy.m */; };
 		E038CF2E3CD470E7F1AE134A5180443B /* Pods-DrinkWaterUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61A1A02BD06BC8E3BD88056F29D423 /* Pods-DrinkWaterUITests-dummy.m */; };
-		F7B679C5C8EF32385ADCF3BAA51A8809 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D79B8243C329E6C879878D8280B724F /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F7B679C5C8EF32385ADCF3BAA51A8809 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 11971621AD5EE53BF245BE46336B6B51 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,49 +49,60 @@
 
 /* Begin PBXFileReference section */
 		0313B77E644AEC199823C35CF90E2390 /* Pods-DrinkWater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrinkWater-umbrella.h"; sourceTree = "<group>"; };
+		03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDataXML-HTML.xcconfig"; sourceTree = "<group>"; };
 		04FF9D0300B512D28713DBD7030A46FB /* Pods-DrinkWaterUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrinkWaterUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		075F4E2FB8C092AF885FDC2244CE4CCC /* Pods-DrinkWaterUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterUITests-frameworks.sh"; sourceTree = "<group>"; };
 		0DC34F79361ED29961519E3F4A3B27EE /* Pods-DrinkWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		0F2629F78E729A44DAAC3EA857B6F7DB /* GDataXML-HTML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDataXML-HTML-umbrella.h"; sourceTree = "<group>"; };
 		105692C0BF1A3088CA1D2F6FE36BDC18 /* Pods-DrinkWater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrinkWater-acknowledgements.plist"; sourceTree = "<group>"; };
+		11971621AD5EE53BF245BE46336B6B51 /* GDataXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = Pod/Classes/GDataXMLNode.m; sourceTree = "<group>"; };
 		145428368E22F6F256957D18BE8A3901 /* Pods-DrinkWater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrinkWater.modulemap"; sourceTree = "<group>"; };
 		195D3EA56C8B3334A932C57783128132 /* Pods-DrinkWater-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWater-resources.sh"; sourceTree = "<group>"; };
 		23F8ED0BEF1943D29FE4C4DC159DAE46 /* Pods_DrinkWaterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWaterTests.framework; path = "Pods-DrinkWaterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		270C96F06886B55D0D16D55D8BE1AF5B /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		2E2840BD82ABD8196E002D686B28983F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		380DDE8471474CF37BEAA6EE7ED8A968 /* Pods-DrinkWaterUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrinkWaterUITests-umbrella.h"; sourceTree = "<group>"; };
 		406C9F9B596C44DCCEA9FA86AF0EFF60 /* Pods-DrinkWaterTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrinkWaterTests.modulemap"; sourceTree = "<group>"; };
-		4484C42E26615E2F30BBF9DA9CABA8BF /* GDataXML-HTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDataXML-HTML-prefix.pch"; sourceTree = "<group>"; };
-		4D79B8243C329E6C879878D8280B724F /* GDataXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = Pod/Classes/GDataXMLNode.m; sourceTree = "<group>"; };
+		456C273C6753B9A3C5FC4104693D5760 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		58C72A0D00FD96421B2D104A6A31B197 /* Pods-DrinkWaterTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrinkWaterTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5BE98347B802005AA15D691A85E39C1F /* Pods-DrinkWaterTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrinkWaterTests-umbrella.h"; sourceTree = "<group>"; };
+		639DA5B35DE3C944F1584489D181F4C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67564B3D10E4349B15FB80ECA0815F36 /* Pods-DrinkWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6BA5E8489AFD8CB77CDC9AABEB636518 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		6D46E45F0E06D172B458F785EF4D7483 /* GDataXML-HTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDataXML-HTML-prefix.pch"; sourceTree = "<group>"; };
 		6E9C192931D85B4CCBDC4D22885E0657 /* Pods-DrinkWaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterTests.release.xcconfig"; sourceTree = "<group>"; };
+		7923B5C4CA0C9EA80EC74B13B2AA05B5 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		796F1AF768E5C85C98C468927CB4142E /* Pods-DrinkWater-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWater-frameworks.sh"; sourceTree = "<group>"; };
 		7A340FCC501675A09B25021848A4ACED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85B937E57CC6483B66423935DC491B12 /* GDataXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = Pod/Classes/GDataXMLNode.h; sourceTree = "<group>"; };
+		823C97FAD25854CA6B708E764E25AE65 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		878A8FA01C3E5189E5306DC8D147D37A /* Pods-DrinkWaterUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrinkWaterUITests.modulemap"; sourceTree = "<group>"; };
 		87A86179CFF26D911CDF7FADD75CA019 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881DAC96BFB2375E724482F0F0BA007B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9137346B30C05B31FA81C86BB36AA519 /* Pods-DrinkWaterTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrinkWaterTests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		949AFE9AA598EF55BC3D0D8D34762EBD /* Pods_DrinkWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWaterUITests.framework; path = "Pods-DrinkWaterUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		994A763DCC4EAF5C8479F4FA0E52C1E1 /* GDataXML-HTML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GDataXML-HTML.modulemap"; sourceTree = "<group>"; };
 		9DC8C888A18C9248D09A0E744F6D0BB9 /* Pods-DrinkWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWater.debug.xcconfig"; sourceTree = "<group>"; };
 		9E2901539080B5A9642CF459F7EDFC39 /* Pods-DrinkWaterTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrinkWaterTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9E820961288A54942E4AEE715ADA402A /* GDataXML-HTML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDataXML-HTML.xcconfig"; sourceTree = "<group>"; };
 		9F126E2C4A3C14E311FD743D29AFAAD7 /* Pods_DrinkWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWater.framework; path = "Pods-DrinkWater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0540987819B6B99087E23E8CF950A65 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		AE0F27E68933852645F6EA353D14C084 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		AE59F484FA883EFA1FD2EC063D573570 /* Pods-DrinkWater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrinkWater-dummy.m"; sourceTree = "<group>"; };
 		AE6300D3449C12AF17AEE0A9D8EBC9BF /* GDataXML_HTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GDataXML_HTML.framework; path = "GDataXML-HTML.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28B52237FD1736E631C6547BBB9DA5C /* Pods-DrinkWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWater.release.xcconfig"; sourceTree = "<group>"; };
+		BDE109D561C4B38DD0F1F61A2BDF9FA7 /* GDataXML-HTML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GDataXML-HTML.modulemap"; sourceTree = "<group>"; };
+		BF7D57B289A9A579978B8AF5DE04BD5D /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		C234A18713FD96F608255166587EFF03 /* Pods-DrinkWaterTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterTests-resources.sh"; sourceTree = "<group>"; };
 		C37F15A856FF12302393A1B5E340BF9B /* Pods-DrinkWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C52ADD69234614F1F82A30B89235AB41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3C40DF09BD2B18420D5AECE1AB9781B /* GDataXML-HTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDataXML-HTML-dummy.m"; sourceTree = "<group>"; };
 		CB07C6FE1C9DA88E2AC3327CA8F0C055 /* Pods-DrinkWaterUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrinkWaterUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CD47831AC575D0CBB63C2C87DB559BD8 /* Pods-DrinkWater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrinkWater-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D422AD3D5A8ED4E64FA2096177A986C3 /* Pods-DrinkWaterUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterUITests-resources.sh"; sourceTree = "<group>"; };
-		D59E33483CDAFE56DFCB490869AE5D56 /* GDataXML-HTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDataXML-HTML-dummy.m"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E4F2D31BB9CEDF3FCEE559D4D95002E8 /* Pods-DrinkWaterTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterTests-frameworks.sh"; sourceTree = "<group>"; };
+		E525C8DD98A2FDC4FAC8C6628E7C0557 /* GDataXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = Pod/Classes/GDataXMLNode.h; sourceTree = "<group>"; };
+		EAD107A8BB42F65FE30A59D184CD9520 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		EC61A1A02BD06BC8E3BD88056F29D423 /* Pods-DrinkWaterUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrinkWaterUITests-dummy.m"; sourceTree = "<group>"; };
+		ED656A7F8F3B6F2946B1BE4B797D677E /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		FFF00CD481AFB79A5D11E94135C7B569 /* GDataXML-HTML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDataXML-HTML-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,25 +141,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		034DC99B7732962E71F109408A37FD03 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0DF4CF6D6E6C5453D8872B1380F7E24A /* GDataXML-HTML */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0DF4CF6D6E6C5453D8872B1380F7E24A /* GDataXML-HTML */ = {
-			isa = PBXGroup;
-			children = (
-				85B937E57CC6483B66423935DC491B12 /* GDataXMLNode.h */,
-				4D79B8243C329E6C879878D8280B724F /* GDataXMLNode.m */,
-				ED8C683B0B6A5DD3428F3D9A3414E58A /* Support Files */,
-			);
-			name = "GDataXML-HTML";
-			path = "GDataXML-HTML";
-			sourceTree = "<group>";
-		};
 		0E9D27AFC8CCDF7FD37DE740C7C303E4 /* Pods-DrinkWaterTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +157,20 @@
 			);
 			name = "Pods-DrinkWaterTests";
 			path = "Target Support Files/Pods-DrinkWaterTests";
+			sourceTree = "<group>";
+		};
+		0ED8644CB6C268358D32F60345270E69 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDE109D561C4B38DD0F1F61A2BDF9FA7 /* GDataXML-HTML.modulemap */,
+				03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */,
+				C3C40DF09BD2B18420D5AECE1AB9781B /* GDataXML-HTML-dummy.m */,
+				6D46E45F0E06D172B458F785EF4D7483 /* GDataXML-HTML-prefix.pch */,
+				FFF00CD481AFB79A5D11E94135C7B569 /* GDataXML-HTML-umbrella.h */,
+				639DA5B35DE3C944F1584489D181F4C2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GDataXML-HTML";
 			sourceTree = "<group>";
 		};
 		1AA62F7D86D9C2D2B5B7BE081B3DC4F6 /* Pods-DrinkWaterUITests */ = {
@@ -203,12 +209,49 @@
 			path = "Target Support Files/Pods-DrinkWater";
 			sourceTree = "<group>";
 		};
+		3C7D8E7C52B6654AAABEE1E0B6506887 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				823C97FAD25854CA6B708E764E25AE65 /* ANSCompatibility.h */,
+				EAD107A8BB42F65FE30A59D184CD9520 /* Answers.h */,
+				ED656A7F8F3B6F2946B1BE4B797D677E /* CLSAttributes.h */,
+				7923B5C4CA0C9EA80EC74B13B2AA05B5 /* CLSLogging.h */,
+				456C273C6753B9A3C5FC4104693D5760 /* CLSReport.h */,
+				A0540987819B6B99087E23E8CF950A65 /* CLSStackFrame.h */,
+				BF7D57B289A9A579978B8AF5DE04BD5D /* Crashlytics.h */,
+				B05C47DDDD048C7BBDB7E1D5BD942D1C /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		4A4062BD35FCB081A516FA4BE72618BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C7D8E7C52B6654AAABEE1E0B6506887 /* Crashlytics */,
+				5854B8C9C2B3B73044F174D3DC878BE1 /* Fabric */,
+				DD9C44954BF5F183EB5AEE8D33EBB986 /* GDataXML-HTML */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5854B8C9C2B3B73044F174D3DC878BE1 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				AE0F27E68933852645F6EA353D14C084 /* FABAttributes.h */,
+				270C96F06886B55D0D16D55D8BE1AF5B /* Fabric.h */,
+				8676F2CE5DF61A911A3D2BE8649ED4AA /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
 		5B33DD384F9F6705BA5B5E2045378A9E /* Targets Support Files */ = {
@@ -237,10 +280,26 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				034DC99B7732962E71F109408A37FD03 /* Pods */,
+				4A4062BD35FCB081A516FA4BE72618BA /* Pods */,
 				6E47E8D87A7D3F9F56A8B8A26E22FE67 /* Products */,
 				5B33DD384F9F6705BA5B5E2045378A9E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8676F2CE5DF61A911A3D2BE8649ED4AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BA5E8489AFD8CB77CDC9AABEB636518 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B05C47DDDD048C7BBDB7E1D5BD942D1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E2840BD82ABD8196E002D686B28983F /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -251,18 +310,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ED8C683B0B6A5DD3428F3D9A3414E58A /* Support Files */ = {
+		DD9C44954BF5F183EB5AEE8D33EBB986 /* GDataXML-HTML */ = {
 			isa = PBXGroup;
 			children = (
-				994A763DCC4EAF5C8479F4FA0E52C1E1 /* GDataXML-HTML.modulemap */,
-				9E820961288A54942E4AEE715ADA402A /* GDataXML-HTML.xcconfig */,
-				D59E33483CDAFE56DFCB490869AE5D56 /* GDataXML-HTML-dummy.m */,
-				4484C42E26615E2F30BBF9DA9CABA8BF /* GDataXML-HTML-prefix.pch */,
-				0F2629F78E729A44DAAC3EA857B6F7DB /* GDataXML-HTML-umbrella.h */,
-				C52ADD69234614F1F82A30B89235AB41 /* Info.plist */,
+				E525C8DD98A2FDC4FAC8C6628E7C0557 /* GDataXMLNode.h */,
+				11971621AD5EE53BF245BE46336B6B51 /* GDataXMLNode.m */,
+				0ED8644CB6C268358D32F60345270E69 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GDataXML-HTML";
+			name = "GDataXML-HTML";
+			path = "GDataXML-HTML";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,7 +555,7 @@
 /* Begin XCBuildConfiguration section */
 		0D759D1E60BAE6121CD4712BB029FCEC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E820961288A54942E4AEE715ADA402A /* GDataXML-HTML.xcconfig */;
+			baseConfigurationReference = 03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -894,7 +950,7 @@
 		};
 		FB864C95FEDDEAC1B6A735F26650A6B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E820961288A54942E4AEE715ADA402A /* GDataXML-HTML.xcconfig */;
+			baseConfigurationReference = 03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

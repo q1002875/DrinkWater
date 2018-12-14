@@ -228,6 +228,7 @@
 				3A164F9421BBC067007118A8 /* Resources */,
 				3AAA5BDE21BD612900194507 /* Embed App Extensions */,
 				3338A7FDC818007BB6694AE4 /* [CP] Embed Pods Frameworks */,
+				3ABB8B8D21C1F6F200534AF2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +369,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrinkWater/Pods-DrinkWater-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3ABB8B8D21C1F6F200534AF2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 753353372d7ffbb80ab6ea8da8e73fedcfe36634 ec78bdfed0368d9fdc31acb6510b71b071cfdfed8a66be2cda870f1f741daf3b\n";
 		};
 		504616D2249EC8FDAEDC0BE8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -631,6 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9VZ63GX87W;
 				INFOPLIST_FILE = DrinkWater/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

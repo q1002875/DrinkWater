@@ -6,6 +6,8 @@ target 'DrinkWater' do
   use_frameworks!
 
   # Pods for DrinkWater
+pod 'Fabric'
+pod 'Crashlytics'
   pod 'GDataXML-HTML'
   target 'DrinkWaterTests' do
     inherit! :search_paths

@@ -1,16 +1,25 @@
 PODS:
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
   - GDataXML-HTML (1.4.1)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - GDataXML-HTML
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
     - GDataXML-HTML
 
 SPEC CHECKSUMS:
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   GDataXML-HTML: a4f11079b48d9fe96ff1fe478943a317185227e2
 
-PODFILE CHECKSUM: f96b7cf88b21e8376a2fbea9e4886b61c30b263d
+PODFILE CHECKSUM: 2a83ab31f034dc9ea92c8597cccde435c57fff8f
 
 COCOAPODS: 1.5.3
