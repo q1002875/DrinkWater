@@ -70,6 +70,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
+                    //在newtime狀態刪除會crash因為找不到identifier  待處理
                     if notification.identifier == self.cellremind.saveuuid{
                         identifiers.append(notification.identifier)
                     }else{

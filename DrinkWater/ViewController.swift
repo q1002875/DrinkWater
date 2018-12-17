@@ -9,10 +9,22 @@
 import UIKit
 //import StoreKit
 class ViewController: UIViewController {
-
+    let dateFormatter : DateFormatter = DateFormatter()
+  
+    let date = Date()
+  
+    @IBOutlet weak var nowtime: UILabel!
+    
+    
+    @IBAction func drink(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        SKStoreReviewController.requestReview()
+      dateFormatter.dateFormat = "yyyy-MMM-dd"
+      nowtime.text = dateFormatter.string(from: date)
+       
+        
+      
         
     }
 

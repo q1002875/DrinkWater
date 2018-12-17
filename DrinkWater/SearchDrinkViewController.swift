@@ -25,10 +25,10 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     @IBOutlet weak var mainMapView: MKMapView!
     //使用位置管理器獲取用戶位置
     let locationManager = CLLocationManager()
-   
+    
     //按鈕設置
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-      
+        
         if annotation is MKUserLocation
         {
             return nil
@@ -61,13 +61,13 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     }
     @objc func buttonTapped(sender:UIButton!)
     {
-     
+        
         
         
         let alert = UIAlertController(title: nil, message: "導航前往這個地點?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default){(action) in
-          
-          
+            
+            
             let target = self.currentpoint
             self.navigate(target)
             
@@ -97,9 +97,9 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
             print("My Home\(coordinate.latitude),\(coordinate.longitude)")
             
             //location
-           let user = self.locationManager.location
-          let userlatitude =  user?.coordinate.latitude
-           let userlongitude = user?.coordinate.longitude
+            let user = self.locationManager.location
+            let userlatitude =  user?.coordinate.latitude
+            let userlongitude = user?.coordinate.longitude
             let sourcecoordinate = CLLocationCoordinate2DMake(userlatitude!, userlongitude!)
             let sourdePlacemark = MKPlacemark(coordinate: sourcecoordinate)
             let sourceMapItem = MKMapItem(placemark: sourdePlacemark)
@@ -118,7 +118,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
+        
         if let url = URL(string: "http://opendata.hccg.gov.tw/dataset/64cb7d6d-692e-4312-a4a5-931b902680d5/resource/9fcbba71-4e28-47c3-8d29-6e85c24e3415/download/20171206102431392.json"){
             
             let session = URLSession.shared
@@ -133,7 +133,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
                         self.drinkname.append(countr.飲水點名稱)
                         self.drinkpoint.append(countr.飲水機所在地)
                     }
-                
+                    
                     for index in 0...self.address.count-1{
                         let geoCoder = CLGeocoder()
                         geoCoder.geocodeAddressString(self.address[index], completionHandler: {
@@ -210,8 +210,8 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         mainMapView.setRegion(region, animated: true)
         
         
-   
+        
     }
-   
+    
     
 }
