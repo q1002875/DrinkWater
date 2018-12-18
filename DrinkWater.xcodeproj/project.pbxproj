@@ -155,6 +155,7 @@
 			children = (
 				3A164F9921BBC067007118A8 /* AppDelegate.swift */,
 				3A164F9B21BBC067007118A8 /* ViewController.swift */,
+				3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */,
 				3A164FC721BBC941007118A8 /* WaterCourseViewController.swift */,
 				3A164FC921BBC97D007118A8 /* DrinkRemindViewController.swift */,
 				3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */,
@@ -170,7 +171,6 @@
 				3AAA5B7C21BCD73800194507 /* WaterModel.xcdatamodeld */,
 				3AAA5B7F21BCD83E00194507 /* SetTimeViewController.swift */,
 				3AAA5B8121BCDD0700194507 /* RemindCell.swift */,
-				3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */,
 			);
 			path = DrinkWater;
 			sourceTree = "<group>";

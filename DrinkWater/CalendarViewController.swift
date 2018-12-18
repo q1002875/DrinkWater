@@ -9,13 +9,15 @@
 import UIKit
 
 class CalendarViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+    var nextmoth = false
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var calendar: UICollectionView!
     @IBOutlet weak var timeLabel: UILabel!
     var currentYear = Calendar.current.component(.year, from: Date())
     var currentMonth = Calendar.current.component(.month, from: Date())
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    
+    
     
     //得到這個月有幾天
     var numberOfDaysInThisMonth:Int{
@@ -41,6 +43,7 @@ class CalendarViewController: UIViewController,UICollectionViewDataSource,UIColl
             currentMonth = 1
             currentYear += 1
         }
+      
         setUp()
     }
     
@@ -50,19 +53,20 @@ class CalendarViewController: UIViewController,UICollectionViewDataSource,UIColl
             currentMonth = 12
             currentYear -= 1
         }
-        setUp()
+                setUp()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
 //        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
-        setUp()
+      
+      setUp()
     }
     
     func setUp(){
         timeLabel.text = months[currentMonth - 1] + " \(currentYear)"
+        cell?.backgroundColor = UIColor.clear
         calendar.reloadData()
         print(whatDayIsIt)
     }
@@ -89,6 +93,7 @@ class CalendarViewController: UIViewController,UICollectionViewDataSource,UIColl
                 textLabel.text = "\(indexPath.row + 1 - howManyItemsShouldIAdd)"
             }
         }
+        
         return cell
     }
     
@@ -105,26 +110,29 @@ class CalendarViewController: UIViewController,UICollectionViewDataSource,UIColl
         return CGSize(width: width, height: 40)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
+ 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         calendar.collectionViewLayout.invalidateLayout()
         calendar.reloadData()
     }
     
+var cell: UICollectionViewCell?
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.gray
     
-    
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let indexpath =  collectionView.indexPathsForSelectedItems{
-        
-        
-        collectionView.backgroundColor = UIColor.white
-        }
     }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = UIColor.clear
+        
+    }
+    
+  
+    
 }
 
 
