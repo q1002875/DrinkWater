@@ -20,7 +20,6 @@
 		3A164FCC21BBC9A9007118A8 /* SearchDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */; };
 		3A164FCE21BBD119007118A8 /* DemoNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FCD21BBD119007118A8 /* DemoNotificationDelegate.swift */; };
 		3A790E7D21C7DF2F00D5C9AB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */; };
-		3AAA5B7221BC2CF800194507 /* change.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7121BC2CF800194507 /* change.swift */; };
 		3AAA5B7421BCC22D00194507 /* DrinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7321BCC22D00194507 /* DrinkModel.swift */; };
 		3AAA5B7B21BCD6AD00194507 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7A21BCD6AD00194507 /* CoreDataHelper.swift */; };
 		3AAA5B7E21BCD73900194507 /* WaterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7C21BCD73800194507 /* WaterModel.xcdatamodeld */; };
@@ -81,7 +80,6 @@
 		3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDrinkViewController.swift; sourceTree = "<group>"; };
 		3A164FCD21BBD119007118A8 /* DemoNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoNotificationDelegate.swift; sourceTree = "<group>"; };
 		3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
-		3AAA5B7121BC2CF800194507 /* change.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = change.swift; sourceTree = "<group>"; };
 		3AAA5B7321BCC22D00194507 /* DrinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkModel.swift; sourceTree = "<group>"; };
 		3AAA5B7A21BCD6AD00194507 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		3AAA5B7D21BCD73800194507 /* WaterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WaterModel.xcdatamodel; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				3A164FA021BBC067007118A8 /* Assets.xcassets */,
 				3A164FA221BBC067007118A8 /* LaunchScreen.storyboard */,
 				3A164FA521BBC067007118A8 /* Info.plist */,
-				3AAA5B7121BC2CF800194507 /* change.swift */,
 				3AAA5B7A21BCD6AD00194507 /* CoreDataHelper.swift */,
 				3AAA5B7321BCC22D00194507 /* DrinkModel.swift */,
 				3AAA5B7C21BCD73800194507 /* WaterModel.xcdatamodeld */,
@@ -360,13 +357,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DrinkWater/Pods-DrinkWater-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GDataXML-HTML/GDataXML_HTML.framework",
+				"${BUILT_PRODUCTS_DIR}/AMCalendar/AMCalendar.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDataXML_HTML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMCalendar.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -470,7 +467,6 @@
 				3A164FC821BBC941007118A8 /* WaterCourseViewController.swift in Sources */,
 				3AAA5B7E21BCD73900194507 /* WaterModel.xcdatamodeld in Sources */,
 				3A164F9C21BBC067007118A8 /* ViewController.swift in Sources */,
-				3AAA5B7221BC2CF800194507 /* change.swift in Sources */,
 				3ABB8B3821BF973900534AF2 /* EGImageAnnotionView.swift in Sources */,
 				3A164F9A21BBC067007118A8 /* AppDelegate.swift in Sources */,
 				3AAA5B7B21BCD6AD00194507 /* CoreDataHelper.swift in Sources */,

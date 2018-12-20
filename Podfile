@@ -8,7 +8,7 @@ target 'DrinkWater' do
   # Pods for DrinkWater
 pod 'Fabric'
 pod 'Crashlytics'
-  pod 'GDataXML-HTML'
+ pod 'AMCalendar'
   target 'DrinkWaterTests' do
     inherit! :search_paths
     # Pods for testing

@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32D6C3732437925E088EFC41F6514F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		094DF23299F9A8C4CCBA234C23A6F785 /* AMCalendarDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7320F4C759D51089550368F110C6B2 /* AMCalendarDataViewController.swift */; };
+		119BB10F351FA3EC8A788DF41CE6683F /* AMCalendar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F20493F784AF9195799597B3408DF7 /* AMCalendar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4376DA15ABD3DC301E8E5C1B9B06A619 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		4432F4D25B8AE0F7CA591E280EFE17B9 /* Pods-DrinkWaterTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BE98347B802005AA15D691A85E39C1F /* Pods-DrinkWaterTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AC5606C581101E0E69DD652079D37BF /* Pods-DrinkWater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0313B77E644AEC199823C35CF90E2390 /* Pods-DrinkWater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B084FA2F9E86FE742D8444466FEC47A /* GDataXML-HTML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFF00CD481AFB79A5D11E94135C7B569 /* GDataXML-HTML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A14D92F1D42E46E08D43939B55B6F45 /* Pods-DrinkWater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE59F484FA883EFA1FD2EC063D573570 /* Pods-DrinkWater-dummy.m */; };
+		A413CD05C8A5B64CEECB4C012B553508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		A4D566D05215FFF25F7B7DC9103C07D5 /* Pods-DrinkWaterUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 380DDE8471474CF37BEAA6EE7ED8A968 /* Pods-DrinkWaterUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A869FBBAB00618E617E5D9BBE212EE6B /* GDataXML-HTML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C40DF09BD2B18420D5AECE1AB9781B /* GDataXML-HTML-dummy.m */; };
-		AEB16EA0F02C816763F18C5CA9053812 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E525C8DD98A2FDC4FAC8C6628E7C0557 /* GDataXMLNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B70B1F84C15724D2AAF9A8B084A7D7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B6EC9C29DE9913E1461C787515FC0C88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		C67D44BE52F3DD829382187ACD8C2443 /* Pods-DrinkWaterTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137346B30C05B31FA81C86BB36AA519 /* Pods-DrinkWaterTests-dummy.m */; };
 		D1C05E456D30DD7C4458A9D6B5692B89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		D3C4F1FE3787E0A5F3FB4E8D4BBD9ABE /* Pods-DrinkWater-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE59F484FA883EFA1FD2EC063D573570 /* Pods-DrinkWater-dummy.m */; };
+		DD1ADE65942A9572EF0E66E795A49BB3 /* AMCalendarDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7353677B20DB25E040D5E6DDC5B561 /* AMCalendarDataViewController.xib */; };
 		E038CF2E3CD470E7F1AE134A5180443B /* Pods-DrinkWaterUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61A1A02BD06BC8E3BD88056F29D423 /* Pods-DrinkWaterUITests-dummy.m */; };
-		F7B679C5C8EF32385ADCF3BAA51A8809 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 11971621AD5EE53BF245BE46336B6B51 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E0B8F62D69ACBC101BC9823627E38AAA /* AMCalendarRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E6935CF849D26F86DEDD3D9E42EE9 /* AMCalendarRootViewController.swift */; };
+		E2136F0F2ACBF94533688248322B293C /* Pods-DrinkWater-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0313B77E644AEC199823C35CF90E2390 /* Pods-DrinkWater-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB19B8DFF9225E72650926A7D9D18362 /* AMCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D5BA1692FB5487D66CECC10C8EC83A /* AMCalendar-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,97 +29,98 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FD613183B65A8234577051BF61BF5A07;
+			remoteGlobalIDString = 04AFDB67C3B2F85CB23FE0082F905927;
 			remoteInfo = "Pods-DrinkWater";
 		};
-		8CB1983657A5A53C92D299E6F13DF0C0 /* PBXContainerItemProxy */ = {
+		B15DE3F36DA88F6453D090CFCB109D81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 74628CE7D2EDB68803DCA009B75BCD6D;
-			remoteInfo = "GDataXML-HTML";
+			remoteGlobalIDString = CC5A4E8FC00A63AA5153B843F15CA247;
+			remoteInfo = AMCalendar;
 		};
 		E9BF207C942C818A67248533CD68DDDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FD613183B65A8234577051BF61BF5A07;
+			remoteGlobalIDString = 04AFDB67C3B2F85CB23FE0082F905927;
 			remoteInfo = "Pods-DrinkWater";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0313B77E644AEC199823C35CF90E2390 /* Pods-DrinkWater-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrinkWater-umbrella.h"; sourceTree = "<group>"; };
-		03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "GDataXML-HTML.xcconfig"; sourceTree = "<group>"; };
 		04FF9D0300B512D28713DBD7030A46FB /* Pods-DrinkWaterUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrinkWaterUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		075F4E2FB8C092AF885FDC2244CE4CCC /* Pods-DrinkWaterUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterUITests-frameworks.sh"; sourceTree = "<group>"; };
 		0DC34F79361ED29961519E3F4A3B27EE /* Pods-DrinkWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		105692C0BF1A3088CA1D2F6FE36BDC18 /* Pods-DrinkWater-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrinkWater-acknowledgements.plist"; sourceTree = "<group>"; };
-		11971621AD5EE53BF245BE46336B6B51 /* GDataXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = Pod/Classes/GDataXMLNode.m; sourceTree = "<group>"; };
 		145428368E22F6F256957D18BE8A3901 /* Pods-DrinkWater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrinkWater.modulemap"; sourceTree = "<group>"; };
+		17F482D29CF46EBD33D5B877783B0BB8 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		195D3EA56C8B3334A932C57783128132 /* Pods-DrinkWater-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWater-resources.sh"; sourceTree = "<group>"; };
-		23F8ED0BEF1943D29FE4C4DC159DAE46 /* Pods_DrinkWaterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWaterTests.framework; path = "Pods-DrinkWaterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		270C96F06886B55D0D16D55D8BE1AF5B /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
-		2E2840BD82ABD8196E002D686B28983F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		1D7E6935CF849D26F86DEDD3D9E42EE9 /* AMCalendarRootViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMCalendarRootViewController.swift; path = AMCalendarViewController/AMCalendarRootViewController.swift; sourceTree = "<group>"; };
+		22368B79C757F4F9E8F087FEC3E1526C /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		2DD0B4E5DA052C6B3C31820D413D710E /* Pods_DrinkWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWaterUITests.framework; path = "Pods-DrinkWaterUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35977DACE3E440E8D5E53A6FB025FB42 /* Pods_DrinkWaterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWaterTests.framework; path = "Pods-DrinkWaterTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		370BF6FD578518471099D075B3FD9D10 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		380DDE8471474CF37BEAA6EE7ED8A968 /* Pods-DrinkWaterUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrinkWaterUITests-umbrella.h"; sourceTree = "<group>"; };
 		406C9F9B596C44DCCEA9FA86AF0EFF60 /* Pods-DrinkWaterTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrinkWaterTests.modulemap"; sourceTree = "<group>"; };
-		456C273C6753B9A3C5FC4104693D5760 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		436835034A62BC55EA317A5F90C96C1D /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		556A62F5E37FF7C5C048D5939479278C /* AMCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMCalendar.framework; path = AMCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5642BF5682DCE85E70D06EC1850A196C /* AMCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AMCalendar.modulemap; sourceTree = "<group>"; };
 		58C72A0D00FD96421B2D104A6A31B197 /* Pods-DrinkWaterTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrinkWaterTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		59D5BA1692FB5487D66CECC10C8EC83A /* AMCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMCalendar-dummy.m"; sourceTree = "<group>"; };
 		5BE98347B802005AA15D691A85E39C1F /* Pods-DrinkWaterTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DrinkWaterTests-umbrella.h"; sourceTree = "<group>"; };
-		639DA5B35DE3C944F1584489D181F4C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D2C136F25B78EB93CC206D0D4059900 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
 		67564B3D10E4349B15FB80ECA0815F36 /* Pods-DrinkWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6BA5E8489AFD8CB77CDC9AABEB636518 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
-		6D46E45F0E06D172B458F785EF4D7483 /* GDataXML-HTML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDataXML-HTML-prefix.pch"; sourceTree = "<group>"; };
 		6E9C192931D85B4CCBDC4D22885E0657 /* Pods-DrinkWaterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterTests.release.xcconfig"; sourceTree = "<group>"; };
-		7923B5C4CA0C9EA80EC74B13B2AA05B5 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		700007FB5D5F1D79E580689EB4CBC64C /* AMCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMCalendar-prefix.pch"; sourceTree = "<group>"; };
+		756A75E3D738C29543B1C5323E1C5031 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		796F1AF768E5C85C98C468927CB4142E /* Pods-DrinkWater-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWater-frameworks.sh"; sourceTree = "<group>"; };
 		7A340FCC501675A09B25021848A4ACED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		823C97FAD25854CA6B708E764E25AE65 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		83F20493F784AF9195799597B3408DF7 /* AMCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMCalendar-umbrella.h"; sourceTree = "<group>"; };
 		878A8FA01C3E5189E5306DC8D147D37A /* Pods-DrinkWaterUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DrinkWaterUITests.modulemap"; sourceTree = "<group>"; };
 		87A86179CFF26D911CDF7FADD75CA019 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		881DAC96BFB2375E724482F0F0BA007B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9137346B30C05B31FA81C86BB36AA519 /* Pods-DrinkWaterTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrinkWaterTests-dummy.m"; sourceTree = "<group>"; };
+		91E3D5EDABF8C4052BA23B1EA74F4146 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		949AFE9AA598EF55BC3D0D8D34762EBD /* Pods_DrinkWaterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWaterUITests.framework; path = "Pods-DrinkWaterUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96960EFB038B3782E1620208D893F21B /* Pods_DrinkWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWater.framework; path = "Pods-DrinkWater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC8C888A18C9248D09A0E744F6D0BB9 /* Pods-DrinkWater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWater.debug.xcconfig"; sourceTree = "<group>"; };
 		9E2901539080B5A9642CF459F7EDFC39 /* Pods-DrinkWaterTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DrinkWaterTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9F126E2C4A3C14E311FD743D29AFAAD7 /* Pods_DrinkWater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DrinkWater.framework; path = "Pods-DrinkWater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0540987819B6B99087E23E8CF950A65 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
-		AE0F27E68933852645F6EA353D14C084 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		AAF583959F75BE719BDA0C49B7F8481D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
 		AE59F484FA883EFA1FD2EC063D573570 /* Pods-DrinkWater-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrinkWater-dummy.m"; sourceTree = "<group>"; };
-		AE6300D3449C12AF17AEE0A9D8EBC9BF /* GDataXML_HTML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GDataXML_HTML.framework; path = "GDataXML-HTML.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28B52237FD1736E631C6547BBB9DA5C /* Pods-DrinkWater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWater.release.xcconfig"; sourceTree = "<group>"; };
-		BDE109D561C4B38DD0F1F61A2BDF9FA7 /* GDataXML-HTML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "GDataXML-HTML.modulemap"; sourceTree = "<group>"; };
-		BF7D57B289A9A579978B8AF5DE04BD5D /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		B527BD041D8AFB3CA8E794F35409F9AD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9B0AD4653E83FA038DDFDEE75A48B4F /* AMCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMCalendar.xcconfig; sourceTree = "<group>"; };
+		C1F0BBFEE3F36316F7F7203B3DE7D4B2 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
 		C234A18713FD96F608255166587EFF03 /* Pods-DrinkWaterTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterTests-resources.sh"; sourceTree = "<group>"; };
 		C37F15A856FF12302393A1B5E340BF9B /* Pods-DrinkWaterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DrinkWaterTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C3C40DF09BD2B18420D5AECE1AB9781B /* GDataXML-HTML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDataXML-HTML-dummy.m"; sourceTree = "<group>"; };
 		CB07C6FE1C9DA88E2AC3327CA8F0C055 /* Pods-DrinkWaterUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrinkWaterUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CD47831AC575D0CBB63C2C87DB559BD8 /* Pods-DrinkWater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DrinkWater-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D422AD3D5A8ED4E64FA2096177A986C3 /* Pods-DrinkWaterUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterUITests-resources.sh"; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E42E5ACABDE169CA23F0CC9B3BA4F2BC /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		E4F2D31BB9CEDF3FCEE559D4D95002E8 /* Pods-DrinkWaterTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DrinkWaterTests-frameworks.sh"; sourceTree = "<group>"; };
-		E525C8DD98A2FDC4FAC8C6628E7C0557 /* GDataXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = Pod/Classes/GDataXMLNode.h; sourceTree = "<group>"; };
-		EAD107A8BB42F65FE30A59D184CD9520 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
 		EC61A1A02BD06BC8E3BD88056F29D423 /* Pods-DrinkWaterUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DrinkWaterUITests-dummy.m"; sourceTree = "<group>"; };
-		ED656A7F8F3B6F2946B1BE4B797D677E /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
-		FFF00CD481AFB79A5D11E94135C7B569 /* GDataXML-HTML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDataXML-HTML-umbrella.h"; sourceTree = "<group>"; };
+		EC7320F4C759D51089550368F110C6B2 /* AMCalendarDataViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMCalendarDataViewController.swift; path = AMCalendarViewController/AMCalendarDataViewController.swift; sourceTree = "<group>"; };
+		FB873C5EBA913AF0C7B4B49922C74015 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		FE7353677B20DB25E040D5E6DDC5B561 /* AMCalendarDataViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AMCalendarDataViewController.xib; path = AMCalendarViewController/AMCalendarDataViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E1BB1D058249ED0C5AFE6E0CDFAF6C4 /* Frameworks */ = {
+		48F477F3B84455A00BAD613D707B5C0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70B1F84C15724D2AAF9A8B084A7D7D1 /* Foundation.framework in Frameworks */,
+				A413CD05C8A5B64CEECB4C012B553508 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D00B2C539BC4D2CA037F20103DDBAECD /* Frameworks */ = {
+		6584689CEA8346CB2ABEEF8AB8315951 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32D6C3732437925E088EFC41F6514F51 /* Foundation.framework in Frameworks */,
+				B6EC9C29DE9913E1461C787515FC0C88 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,18 +161,22 @@
 			path = "Target Support Files/Pods-DrinkWaterTests";
 			sourceTree = "<group>";
 		};
-		0ED8644CB6C268358D32F60345270E69 /* Support Files */ = {
+		0F3E22AAD10ED00BB73EF1960E54B57E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDE109D561C4B38DD0F1F61A2BDF9FA7 /* GDataXML-HTML.modulemap */,
-				03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */,
-				C3C40DF09BD2B18420D5AECE1AB9781B /* GDataXML-HTML-dummy.m */,
-				6D46E45F0E06D172B458F785EF4D7483 /* GDataXML-HTML-prefix.pch */,
-				FFF00CD481AFB79A5D11E94135C7B569 /* GDataXML-HTML-umbrella.h */,
-				639DA5B35DE3C944F1584489D181F4C2 /* Info.plist */,
+				291614BD957793B46087352D6866EDD8 /* AMCalendar */,
+				28AE83BDD9AE2BF3596B070774F321A1 /* Crashlytics */,
+				4BBDF339A458073A706035E07D2F8A32 /* Fabric */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GDataXML-HTML";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		10CC1C8897D53B9D70D3E42886906279 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE7353677B20DB25E040D5E6DDC5B561 /* AMCalendarDataViewController.xib */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		1AA62F7D86D9C2D2B5B7BE081B3DC4F6 /* Pods-DrinkWaterUITests */ = {
@@ -191,6 +197,34 @@
 			path = "Target Support Files/Pods-DrinkWaterUITests";
 			sourceTree = "<group>";
 		};
+		28AE83BDD9AE2BF3596B070774F321A1 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				436835034A62BC55EA317A5F90C96C1D /* ANSCompatibility.h */,
+				17F482D29CF46EBD33D5B877783B0BB8 /* Answers.h */,
+				370BF6FD578518471099D075B3FD9D10 /* CLSAttributes.h */,
+				E42E5ACABDE169CA23F0CC9B3BA4F2BC /* CLSLogging.h */,
+				C1F0BBFEE3F36316F7F7203B3DE7D4B2 /* CLSReport.h */,
+				22368B79C757F4F9E8F087FEC3E1526C /* CLSStackFrame.h */,
+				756A75E3D738C29543B1C5323E1C5031 /* Crashlytics.h */,
+				6CF17A8F0D950C64DE73095468D6BCCF /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		291614BD957793B46087352D6866EDD8 /* AMCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				EC7320F4C759D51089550368F110C6B2 /* AMCalendarDataViewController.swift */,
+				1D7E6935CF849D26F86DEDD3D9E42EE9 /* AMCalendarRootViewController.swift */,
+				10CC1C8897D53B9D70D3E42886906279 /* Resources */,
+				D67F10D3191D88C05E37701FE715D5D4 /* Support Files */,
+			);
+			name = AMCalendar;
+			path = AMCalendar;
+			sourceTree = "<group>";
+		};
 		2EAA3C103CCB99F1518E361A962D60D3 /* Pods-DrinkWater */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,20 +243,12 @@
 			path = "Target Support Files/Pods-DrinkWater";
 			sourceTree = "<group>";
 		};
-		3C7D8E7C52B6654AAABEE1E0B6506887 /* Crashlytics */ = {
+		43BFEBD43D8FAC1C78207460F6B064E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				823C97FAD25854CA6B708E764E25AE65 /* ANSCompatibility.h */,
-				EAD107A8BB42F65FE30A59D184CD9520 /* Answers.h */,
-				ED656A7F8F3B6F2946B1BE4B797D677E /* CLSAttributes.h */,
-				7923B5C4CA0C9EA80EC74B13B2AA05B5 /* CLSLogging.h */,
-				456C273C6753B9A3C5FC4104693D5760 /* CLSReport.h */,
-				A0540987819B6B99087E23E8CF950A65 /* CLSStackFrame.h */,
-				BF7D57B289A9A579978B8AF5DE04BD5D /* Crashlytics.h */,
-				B05C47DDDD048C7BBDB7E1D5BD942D1C /* Frameworks */,
+				FB873C5EBA913AF0C7B4B49922C74015 /* Fabric.framework */,
 			);
-			name = Crashlytics;
-			path = Crashlytics;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
@@ -233,22 +259,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		4A4062BD35FCB081A516FA4BE72618BA /* Pods */ = {
+		4BBDF339A458073A706035E07D2F8A32 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				3C7D8E7C52B6654AAABEE1E0B6506887 /* Crashlytics */,
-				5854B8C9C2B3B73044F174D3DC878BE1 /* Fabric */,
-				DD9C44954BF5F183EB5AEE8D33EBB986 /* GDataXML-HTML */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5854B8C9C2B3B73044F174D3DC878BE1 /* Fabric */ = {
-			isa = PBXGroup;
-			children = (
-				AE0F27E68933852645F6EA353D14C084 /* FABAttributes.h */,
-				270C96F06886B55D0D16D55D8BE1AF5B /* Fabric.h */,
-				8676F2CE5DF61A911A3D2BE8649ED4AA /* Frameworks */,
+				5D2C136F25B78EB93CC206D0D4059900 /* FABAttributes.h */,
+				91E3D5EDABF8C4052BA23B1EA74F4146 /* Fabric.h */,
+				43BFEBD43D8FAC1C78207460F6B064E6 /* Frameworks */,
 			);
 			name = Fabric;
 			path = Fabric;
@@ -264,15 +280,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6E47E8D87A7D3F9F56A8B8A26E22FE67 /* Products */ = {
+		6CF17A8F0D950C64DE73095468D6BCCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE6300D3449C12AF17AEE0A9D8EBC9BF /* GDataXML_HTML.framework */,
-				9F126E2C4A3C14E311FD743D29AFAAD7 /* Pods_DrinkWater.framework */,
-				23F8ED0BEF1943D29FE4C4DC159DAE46 /* Pods_DrinkWaterTests.framework */,
-				949AFE9AA598EF55BC3D0D8D34762EBD /* Pods_DrinkWaterUITests.framework */,
+				AAF583959F75BE719BDA0C49B7F8481D /* Crashlytics.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -280,26 +293,21 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4A4062BD35FCB081A516FA4BE72618BA /* Pods */,
-				6E47E8D87A7D3F9F56A8B8A26E22FE67 /* Products */,
+				0F3E22AAD10ED00BB73EF1960E54B57E /* Pods */,
+				B9D38D5C53B7581ADBC4E84C576472C2 /* Products */,
 				5B33DD384F9F6705BA5B5E2045378A9E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8676F2CE5DF61A911A3D2BE8649ED4AA /* Frameworks */ = {
+		B9D38D5C53B7581ADBC4E84C576472C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BA5E8489AFD8CB77CDC9AABEB636518 /* Fabric.framework */,
+				556A62F5E37FF7C5C048D5939479278C /* AMCalendar.framework */,
+				96960EFB038B3782E1620208D893F21B /* Pods_DrinkWater.framework */,
+				35977DACE3E440E8D5E53A6FB025FB42 /* Pods_DrinkWaterTests.framework */,
+				2DD0B4E5DA052C6B3C31820D413D710E /* Pods_DrinkWaterUITests.framework */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B05C47DDDD048C7BBDB7E1D5BD942D1C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2E2840BD82ABD8196E002D686B28983F /* Crashlytics.framework */,
-			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -310,15 +318,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD9C44954BF5F183EB5AEE8D33EBB986 /* GDataXML-HTML */ = {
+		D67F10D3191D88C05E37701FE715D5D4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E525C8DD98A2FDC4FAC8C6628E7C0557 /* GDataXMLNode.h */,
-				11971621AD5EE53BF245BE46336B6B51 /* GDataXMLNode.m */,
-				0ED8644CB6C268358D32F60345270E69 /* Support Files */,
+				5642BF5682DCE85E70D06EC1850A196C /* AMCalendar.modulemap */,
+				B9B0AD4653E83FA038DDFDEE75A48B4F /* AMCalendar.xcconfig */,
+				59D5BA1692FB5487D66CECC10C8EC83A /* AMCalendar-dummy.m */,
+				700007FB5D5F1D79E580689EB4CBC64C /* AMCalendar-prefix.pch */,
+				83F20493F784AF9195799597B3408DF7 /* AMCalendar-umbrella.h */,
+				B527BD041D8AFB3CA8E794F35409F9AD /* Info.plist */,
 			);
-			name = "GDataXML-HTML";
-			path = "GDataXML-HTML";
+			name = "Support Files";
+			path = "../Target Support Files/AMCalendar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,42 +351,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC9649C5FEE6123CF6D0DCDE1246271E /* Headers */ = {
+		4791F7C4D7780A034B0EFE0C016519F0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B084FA2F9E86FE742D8444466FEC47A /* GDataXML-HTML-umbrella.h in Headers */,
-				AEB16EA0F02C816763F18C5CA9053812 /* GDataXMLNode.h in Headers */,
+				119BB10F351FA3EC8A788DF41CE6683F /* AMCalendar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD11C416C20B993B5EFAF5CC209AB058 /* Headers */ = {
+		BE212C54AD760A446FF41EDCA690C143 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC5606C581101E0E69DD652079D37BF /* Pods-DrinkWater-umbrella.h in Headers */,
+				E2136F0F2ACBF94533688248322B293C /* Pods-DrinkWater-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		74628CE7D2EDB68803DCA009B75BCD6D /* GDataXML-HTML */ = {
+		04AFDB67C3B2F85CB23FE0082F905927 /* Pods-DrinkWater */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B6C36D2A076B66AF75B4A704D31FB3C /* Build configuration list for PBXNativeTarget "GDataXML-HTML" */;
+			buildConfigurationList = 29CEAB08276AE5D11F6A109CE94C2CF9 /* Build configuration list for PBXNativeTarget "Pods-DrinkWater" */;
 			buildPhases = (
-				FC9649C5FEE6123CF6D0DCDE1246271E /* Headers */,
-				C82EAD4AEAF01633BAD1E996EA2E26D3 /* Sources */,
-				D00B2C539BC4D2CA037F20103DDBAECD /* Frameworks */,
-				A5CE18F3DF1F16F2984995F6829BAAB7 /* Resources */,
+				BE212C54AD760A446FF41EDCA690C143 /* Headers */,
+				29D881E234E9129DF99EC81EF40ED455 /* Sources */,
+				6584689CEA8346CB2ABEEF8AB8315951 /* Frameworks */,
+				2B8FE5EEA12747363499C4D72A15D097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FAED177D2000DC6998DF9175DFA08E7 /* PBXTargetDependency */,
+			);
+			name = "Pods-DrinkWater";
+			productName = "Pods-DrinkWater";
+			productReference = 96960EFB038B3782E1620208D893F21B /* Pods_DrinkWater.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC5A4E8FC00A63AA5153B843F15CA247 /* AMCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6674FB76C37F364F2C5CD586CC31622A /* Build configuration list for PBXNativeTarget "AMCalendar" */;
+			buildPhases = (
+				4791F7C4D7780A034B0EFE0C016519F0 /* Headers */,
+				23698FA65ABCD062A02D86AC0B8C958E /* Sources */,
+				48F477F3B84455A00BAD613D707B5C0B /* Frameworks */,
+				358729E5F245E916875B9DC4EFE17823 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "GDataXML-HTML";
-			productName = "GDataXML-HTML";
-			productReference = AE6300D3449C12AF17AEE0A9D8EBC9BF /* GDataXML_HTML.framework */;
+			name = AMCalendar;
+			productName = AMCalendar;
+			productReference = 556A62F5E37FF7C5C048D5939479278C /* AMCalendar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D475AC7B3CAE3CAC7F53EBD7427F246D /* Pods-DrinkWaterUITests */ = {
@@ -394,26 +423,7 @@
 			);
 			name = "Pods-DrinkWaterUITests";
 			productName = "Pods-DrinkWaterUITests";
-			productReference = 949AFE9AA598EF55BC3D0D8D34762EBD /* Pods_DrinkWaterUITests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FD613183B65A8234577051BF61BF5A07 /* Pods-DrinkWater */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EBB68D4C856F94F675EA2BBB54587A6E /* Build configuration list for PBXNativeTarget "Pods-DrinkWater" */;
-			buildPhases = (
-				FD11C416C20B993B5EFAF5CC209AB058 /* Headers */,
-				8FEAA022FAE28AEE43B607092A5F6728 /* Sources */,
-				6E1BB1D058249ED0C5AFE6E0CDFAF6C4 /* Frameworks */,
-				D747530827D9FC38020ACCBCF49DF68E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AC63C76FBC74A15F44CD58779F9C0A55 /* PBXTargetDependency */,
-			);
-			name = "Pods-DrinkWater";
-			productName = "Pods-DrinkWater";
-			productReference = 9F126E2C4A3C14E311FD743D29AFAAD7 /* Pods_DrinkWater.framework */;
+			productReference = 2DD0B4E5DA052C6B3C31820D413D710E /* Pods_DrinkWaterUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FE7C23AB5921240A11359BF9B5B5ED5D /* Pods-DrinkWaterTests */ = {
@@ -432,7 +442,7 @@
 			);
 			name = "Pods-DrinkWaterTests";
 			productName = "Pods-DrinkWaterTests";
-			productReference = 23F8ED0BEF1943D29FE4C4DC159DAE46 /* Pods_DrinkWaterTests.framework */;
+			productReference = 35977DACE3E440E8D5E53A6FB025FB42 /* Pods_DrinkWaterTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -452,12 +462,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 6E47E8D87A7D3F9F56A8B8A26E22FE67 /* Products */;
+			productRefGroup = B9D38D5C53B7581ADBC4E84C576472C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74628CE7D2EDB68803DCA009B75BCD6D /* GDataXML-HTML */,
-				FD613183B65A8234577051BF61BF5A07 /* Pods-DrinkWater */,
+				CC5A4E8FC00A63AA5153B843F15CA247 /* AMCalendar */,
+				04AFDB67C3B2F85CB23FE0082F905927 /* Pods-DrinkWater */,
 				FE7C23AB5921240A11359BF9B5B5ED5D /* Pods-DrinkWaterTests */,
 				D475AC7B3CAE3CAC7F53EBD7427F246D /* Pods-DrinkWaterUITests */,
 			);
@@ -465,6 +475,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B8FE5EEA12747363499C4D72A15D097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358729E5F245E916875B9DC4EFE17823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1ADE65942A9572EF0E66E795A49BB3 /* AMCalendarDataViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		835B32FA5F7D543F6B23358F3BA55147 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,45 +504,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5CE18F3DF1F16F2984995F6829BAAB7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D747530827D9FC38020ACCBCF49DF68E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		23698FA65ABCD062A02D86AC0B8C958E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB19B8DFF9225E72650926A7D9D18362 /* AMCalendar-dummy.m in Sources */,
+				094DF23299F9A8C4CCBA234C23A6F785 /* AMCalendarDataViewController.swift in Sources */,
+				E0B8F62D69ACBC101BC9823627E38AAA /* AMCalendarRootViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29D881E234E9129DF99EC81EF40ED455 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A14D92F1D42E46E08D43939B55B6F45 /* Pods-DrinkWater-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53611F340FED39FB4D118DD1C0337714 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C67D44BE52F3DD829382187ACD8C2443 /* Pods-DrinkWaterTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FEAA022FAE28AEE43B607092A5F6728 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3C4F1FE3787E0A5F3FB4E8D4BBD9ABE /* Pods-DrinkWater-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C82EAD4AEAF01633BAD1E996EA2E26D3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A869FBBAB00618E617E5D9BBE212EE6B /* GDataXML-HTML-dummy.m in Sources */,
-				F7B679C5C8EF32385ADCF3BAA51A8809 /* GDataXMLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,30 +544,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5FAED177D2000DC6998DF9175DFA08E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AMCalendar;
+			target = CC5A4E8FC00A63AA5153B843F15CA247 /* AMCalendar */;
+			targetProxy = B15DE3F36DA88F6453D090CFCB109D81 /* PBXContainerItemProxy */;
+		};
 		5FFF4895BD22CE7A71023C3A6367FE6D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DrinkWater";
-			target = FD613183B65A8234577051BF61BF5A07 /* Pods-DrinkWater */;
+			target = 04AFDB67C3B2F85CB23FE0082F905927 /* Pods-DrinkWater */;
 			targetProxy = E9BF207C942C818A67248533CD68DDDB /* PBXContainerItemProxy */;
 		};
 		8CE6EB584892077CC5256BDE1DB0C689 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DrinkWater";
-			target = FD613183B65A8234577051BF61BF5A07 /* Pods-DrinkWater */;
+			target = 04AFDB67C3B2F85CB23FE0082F905927 /* Pods-DrinkWater */;
 			targetProxy = 32FBF02F375323DEB3A897D6675160C9 /* PBXContainerItemProxy */;
-		};
-		AC63C76FBC74A15F44CD58779F9C0A55 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "GDataXML-HTML";
-			target = 74628CE7D2EDB68803DCA009B75BCD6D /* GDataXML-HTML */;
-			targetProxy = 8CB1983657A5A53C92D299E6F13DF0C0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0D759D1E60BAE6121CD4712BB029FCEC /* Release */ = {
+		0539FAF3A951FB5A7B308AE06DCF852B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */;
+			baseConfigurationReference = B9B0AD4653E83FA038DDFDEE75A48B4F /* AMCalendar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -566,22 +578,60 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GDataXML-HTML/GDataXML-HTML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GDataXML-HTML/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AMCalendar/AMCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMCalendar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/GDataXML-HTML/GDataXML-HTML.modulemap";
-				PRODUCT_MODULE_NAME = GDataXML_HTML;
-				PRODUCT_NAME = GDataXML_HTML;
+				MODULEMAP_FILE = "Target Support Files/AMCalendar/AMCalendar.modulemap";
+				PRODUCT_MODULE_NAME = AMCalendar;
+				PRODUCT_NAME = AMCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0E710B6EBB015A7588164F9E4538064B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B28B52237FD1736E631C6547BBB9DA5C /* Pods-DrinkWater.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DrinkWater/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DrinkWater/Pods-DrinkWater.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -705,45 +755,6 @@
 			};
 			name = Debug;
 		};
-		7B8EEB1B7B1EEBA1C4EFD375EA814573 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B28B52237FD1736E631C6547BBB9DA5C /* Pods-DrinkWater.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DrinkWater/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DrinkWater/Pods-DrinkWater.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		9780F050C6EB682F1F05F4F9582E0703 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DC34F79361ED29961519E3F4A3B27EE /* Pods-DrinkWaterUITests.debug.xcconfig */;
@@ -848,6 +859,44 @@
 			};
 			name = Debug;
 		};
+		B8310E47459740237CC20E997DAA8C06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DC8C888A18C9248D09A0E744F6D0BB9 /* Pods-DrinkWater.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DrinkWater/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DrinkWater/Pods-DrinkWater.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B97A7F6ACE1216BB5A2307CA83FC93C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -910,47 +959,9 @@
 			};
 			name = Release;
 		};
-		E0D4A51E79F98C461CD951FAE1BCDDD2 /* Debug */ = {
+		F483088DF4248735A6C24414698420CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9DC8C888A18C9248D09A0E744F6D0BB9 /* Pods-DrinkWater.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DrinkWater/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DrinkWater/Pods-DrinkWater.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FB864C95FEDDEAC1B6A735F26650A6B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03E37E3ADA51F0C8607532FB4D5BADEF /* GDataXML-HTML.xcconfig */;
+			baseConfigurationReference = B9B0AD4653E83FA038DDFDEE75A48B4F /* AMCalendar.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -961,45 +972,46 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GDataXML-HTML/GDataXML-HTML-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GDataXML-HTML/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AMCalendar/AMCalendar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMCalendar/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/GDataXML-HTML/GDataXML-HTML.modulemap";
-				PRODUCT_MODULE_NAME = GDataXML_HTML;
-				PRODUCT_NAME = GDataXML_HTML;
+				MODULEMAP_FILE = "Target Support Files/AMCalendar/AMCalendar.modulemap";
+				PRODUCT_MODULE_NAME = AMCalendar;
+				PRODUCT_NAME = AMCalendar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B6C36D2A076B66AF75B4A704D31FB3C /* Build configuration list for PBXNativeTarget "GDataXML-HTML" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FB864C95FEDDEAC1B6A735F26650A6B3 /* Debug */,
-				0D759D1E60BAE6121CD4712BB029FCEC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2850AD34ACF518040CEA4F27DFA97387 /* Build configuration list for PBXNativeTarget "Pods-DrinkWaterUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9780F050C6EB682F1F05F4F9582E0703 /* Debug */,
 				35F89E442C52137A6BCF54D9B7B29085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29CEAB08276AE5D11F6A109CE94C2CF9 /* Build configuration list for PBXNativeTarget "Pods-DrinkWater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8310E47459740237CC20E997DAA8C06 /* Debug */,
+				0E710B6EBB015A7588164F9E4538064B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1022,11 +1034,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBB68D4C856F94F675EA2BBB54587A6E /* Build configuration list for PBXNativeTarget "Pods-DrinkWater" */ = {
+		6674FB76C37F364F2C5CD586CC31622A /* Build configuration list for PBXNativeTarget "AMCalendar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0D4A51E79F98C461CD951FAE1BCDDD2 /* Debug */,
-				7B8EEB1B7B1EEBA1C4EFD375EA814573 /* Release */,
+				0539FAF3A951FB5A7B308AE06DCF852B /* Debug */,
+				F483088DF4248735A6C24414698420CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

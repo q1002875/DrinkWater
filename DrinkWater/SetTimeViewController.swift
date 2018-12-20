@@ -46,8 +46,6 @@ class SetTimeViewController: UIViewController {
     }
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickdate.datePickerMode = .time

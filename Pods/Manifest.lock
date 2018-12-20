@@ -1,25 +1,25 @@
 PODS:
+  - AMCalendar (1.0)
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
   - Fabric (1.9.0)
-  - GDataXML-HTML (1.4.1)
 
 DEPENDENCIES:
+  - AMCalendar
   - Crashlytics
   - Fabric
-  - GDataXML-HTML
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AMCalendar
     - Crashlytics
     - Fabric
-    - GDataXML-HTML
 
 SPEC CHECKSUMS:
+  AMCalendar: 6b499f59295d8074e89e065f71d8afa9a8285a49
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
-  GDataXML-HTML: a4f11079b48d9fe96ff1fe478943a317185227e2
 
-PODFILE CHECKSUM: 2a83ab31f034dc9ea92c8597cccde435c57fff8f
+PODFILE CHECKSUM: 3282a29da0df5ba9f5f3028c04b66082e8e18a24
 
 COCOAPODS: 1.5.3
