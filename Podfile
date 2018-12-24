@@ -6,13 +6,13 @@ target 'DrinkWater' do
   use_frameworks!
 
   # Pods for DrinkWater
-pod 'Fabric'
-pod 'Crashlytics'
+  pod 'Fabric'
+  pod 'Crashlytics'
+ 
  pod 'AMCalendar'
   target 'DrinkWaterTests' do
     inherit! :search_paths
     # Pods for testing
-
   end
 
   target 'DrinkWaterUITests' do

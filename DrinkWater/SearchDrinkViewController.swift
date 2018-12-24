@@ -192,7 +192,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         //取得用戶授權
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        
+    //    locationManager.allowsBackgroundLocationUpdates = true
         
         //開始放大地圖畫面
         let latitude :CLLocationDegrees = 23.702290

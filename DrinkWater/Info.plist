@@ -45,29 +45,28 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>允許取得位置,以便搜尋附近飲水機</string>
-    
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-        
-    </dict>
-    
-    
-    <key>Fabric</key>
-    <dict>
-        <key>APIKey</key>
-        <string>753353372d7ffbb80ab6ea8da8e73fedcfe36634</string>
-        <key>Kits</key>
-        <array>
-            <dict>
-                <key>KitInfo</key>
-                <dict/>
-                <key>KitName</key>
-                <string>Crashlytics</string>
-            </dict>
-        </array>
-    </dict>
-    
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>753353372d7ffbb80ab6ea8da8e73fedcfe36634</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

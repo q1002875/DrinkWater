@@ -15,11 +15,11 @@
 		3A164FA421BBC067007118A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A164FA221BBC067007118A8 /* LaunchScreen.storyboard */; };
 		3A164FAF21BBC067007118A8 /* DrinkWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FAE21BBC067007118A8 /* DrinkWaterTests.swift */; };
 		3A164FBA21BBC067007118A8 /* DrinkWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FB921BBC067007118A8 /* DrinkWaterUITests.swift */; };
-		3A164FC821BBC941007118A8 /* WaterCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FC721BBC941007118A8 /* WaterCourseViewController.swift */; };
 		3A164FCA21BBC97D007118A8 /* DrinkRemindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FC921BBC97D007118A8 /* DrinkRemindViewController.swift */; };
 		3A164FCC21BBC9A9007118A8 /* SearchDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */; };
 		3A164FCE21BBD119007118A8 /* DemoNotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FCD21BBD119007118A8 /* DemoNotificationDelegate.swift */; };
 		3A790E7D21C7DF2F00D5C9AB /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */; };
+		3A84FF2821D0BE1E00EBB721 /* ProgressRoundView in Resources */ = {isa = PBXBuildFile; fileRef = 3A84FF2721D0BE1D00EBB721 /* ProgressRoundView */; };
 		3AAA5B7421BCC22D00194507 /* DrinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7321BCC22D00194507 /* DrinkModel.swift */; };
 		3AAA5B7B21BCD6AD00194507 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7A21BCD6AD00194507 /* CoreDataHelper.swift */; };
 		3AAA5B7E21BCD73900194507 /* WaterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7C21BCD73800194507 /* WaterModel.xcdatamodeld */; };
@@ -75,11 +75,11 @@
 		3A164FB521BBC067007118A8 /* DrinkWaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkWaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A164FB921BBC067007118A8 /* DrinkWaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkWaterUITests.swift; sourceTree = "<group>"; };
 		3A164FBB21BBC067007118A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A164FC721BBC941007118A8 /* WaterCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCourseViewController.swift; sourceTree = "<group>"; };
 		3A164FC921BBC97D007118A8 /* DrinkRemindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRemindViewController.swift; sourceTree = "<group>"; };
 		3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDrinkViewController.swift; sourceTree = "<group>"; };
 		3A164FCD21BBD119007118A8 /* DemoNotificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoNotificationDelegate.swift; sourceTree = "<group>"; };
 		3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3A84FF2721D0BE1D00EBB721 /* ProgressRoundView */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ProgressRoundView; path = "../../../../Downloads/JDProgressRoundView-master/ProgressRoundView"; sourceTree = "<group>"; };
 		3AAA5B7321BCC22D00194507 /* DrinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkModel.swift; sourceTree = "<group>"; };
 		3AAA5B7A21BCD6AD00194507 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		3AAA5B7D21BCD73800194507 /* WaterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WaterModel.xcdatamodel; sourceTree = "<group>"; };
@@ -151,10 +151,10 @@
 		3A164F9821BBC067007118A8 /* DrinkWater */ = {
 			isa = PBXGroup;
 			children = (
+				3A84FF2721D0BE1D00EBB721 /* ProgressRoundView */,
 				3A164F9921BBC067007118A8 /* AppDelegate.swift */,
 				3A164F9B21BBC067007118A8 /* ViewController.swift */,
 				3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */,
-				3A164FC721BBC941007118A8 /* WaterCourseViewController.swift */,
 				3A164FC921BBC97D007118A8 /* DrinkRemindViewController.swift */,
 				3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */,
 				3ABB8B3721BF973900534AF2 /* EGImageAnnotionView.swift */,
@@ -227,8 +227,8 @@
 				3A164F9321BBC067007118A8 /* Frameworks */,
 				3A164F9421BBC067007118A8 /* Resources */,
 				3AAA5BDE21BD612900194507 /* Embed App Extensions */,
-				3338A7FDC818007BB6694AE4 /* [CP] Embed Pods Frameworks */,
 				3ABB8B8D21C1F6F200534AF2 /* ShellScript */,
+				7537168014E263739DFDA21B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +289,7 @@
 				TargetAttributes = {
 					3A164F9521BBC067007118A8 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 					3A164FA921BBC067007118A8 = {
 						CreatedOnToolsVersion = 10.0;
@@ -326,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A164FA421BBC067007118A8 /* LaunchScreen.storyboard in Resources */,
+				3A84FF2821D0BE1E00EBB721 /* ProgressRoundView in Resources */,
 				3A164FA121BBC067007118A8 /* Assets.xcassets in Resources */,
 				3A164F9F21BBC067007118A8 /* Main.storyboard in Resources */,
 			);
@@ -348,28 +350,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3338A7FDC818007BB6694AE4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DrinkWater/Pods-DrinkWater-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AMCalendar/AMCalendar.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMCalendar.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrinkWater/Pods-DrinkWater-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3ABB8B8D21C1F6F200534AF2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +412,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7537168014E263739DFDA21B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DrinkWater/Pods-DrinkWater-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMCalendar/AMCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrinkWater/Pods-DrinkWater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E044CF9530819DBF03C3E522 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,7 +466,6 @@
 				3AAA5B8021BCD83E00194507 /* SetTimeViewController.swift in Sources */,
 				3A164FCE21BBD119007118A8 /* DemoNotificationDelegate.swift in Sources */,
 				3A164FCA21BBC97D007118A8 /* DrinkRemindViewController.swift in Sources */,
-				3A164FC821BBC941007118A8 /* WaterCourseViewController.swift in Sources */,
 				3AAA5B7E21BCD73900194507 /* WaterModel.xcdatamodeld in Sources */,
 				3A164F9C21BBC067007118A8 /* ViewController.swift in Sources */,
 				3ABB8B3821BF973900534AF2 /* EGImageAnnotionView.swift in Sources */,
@@ -659,7 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orange.DrinkWater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -678,7 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orange.DrinkWater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -698,7 +699,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orange.DrinkWaterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrinkWater.app/DrinkWater";
 			};
@@ -719,7 +720,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orange.DrinkWaterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DrinkWater.app/DrinkWater";
 			};
@@ -739,7 +740,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orange.DrinkWaterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DrinkWater;
 			};
@@ -759,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orange.DrinkWaterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = DrinkWater;
 			};

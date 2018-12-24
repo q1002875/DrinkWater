@@ -17,24 +17,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NB-FK-2xU">
-                                <rect key="frame" x="119" y="342" width="136" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
-                                <state key="normal" title="喝水囉"/>
-                                <connections>
-                                    <action selector="drink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZi-6t-Hxs"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-Po-svF">
-                                <rect key="frame" x="16" y="81" width="343" height="163"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-Po-svF">
+                                <rect key="frame" x="36" y="172" width="295" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="y4v-Lm-m72"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NB-FK-2xU">
+                                <rect key="frame" x="146" y="530" width="83" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="喝水囉">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="drink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZi-6t-Hxs"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cc-O4-vJo">
+                                <rect key="frame" x="71" y="461" width="242" height="2"/>
+                                <color key="progressTintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-Oi-cmt">
+                                <rect key="frame" x="85" y="339" width="205" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="8bn-8p-gfC"/>
+                                    <constraint firstAttribute="width" constant="205" id="tyZ-LW-y95"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每天十杯水" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBk-PG-0Dn">
+                                <rect key="frame" x="130" y="86" width="114" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9NB-FK-2xU" firstAttribute="top" secondItem="7Cc-O4-vJo" secondAttribute="bottom" constant="28" id="69H-JG-dQM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y7m-Po-svF" secondAttribute="trailing" constant="44" id="GzC-qv-8E4"/>
+                            <constraint firstItem="9NB-FK-2xU" firstAttribute="centerX" secondItem="y7m-Po-svF" secondAttribute="centerX" id="JrG-0J-gDa"/>
+                            <constraint firstItem="zMF-Oi-cmt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="aea-0C-pPm"/>
+                            <constraint firstItem="7Cc-O4-vJo" firstAttribute="top" secondItem="zMF-Oi-cmt" secondAttribute="bottom" constant="66" id="cab-I8-WUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMF-Oi-cmt" secondAttribute="trailing" constant="85" id="dIg-EY-8fF"/>
+                            <constraint firstItem="y7m-Po-svF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="ee5-ZZ-V1G"/>
+                            <constraint firstItem="zMF-Oi-cmt" firstAttribute="centerX" secondItem="y7m-Po-svF" secondAttribute="centerX" id="jLp-9R-C16"/>
+                            <constraint firstItem="7Cc-O4-vJo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="nJE-Rz-89j"/>
+                            <constraint firstItem="7Cc-O4-vJo" firstAttribute="centerX" secondItem="y7m-Po-svF" secondAttribute="centerX" id="wXc-ot-5Vm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9NB-FK-2xU" secondAttribute="bottom" constant="43" id="wr5-9K-2PK"/>
+                            <constraint firstItem="y7m-Po-svF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="xVh-Q4-lau"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="呵喝呵" id="mz3-9G-28k">
@@ -45,7 +83,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="drinkprogress" destination="zMF-Oi-cmt" id="Zwg-G0-ylx"/>
                         <outlet property="nowtime" destination="y7m-Po-svF" id="Ghr-9G-cg0"/>
+                        <outlet property="progress" destination="7Cc-O4-vJo" id="xe6-W5-yRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,44 +113,48 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="當日飲水量為:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzK-18-rpJ">
+                                <rect key="frame" x="50" y="562" width="134.5" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS2-NW-wAf">
+                                <rect key="frame" x="245" y="566" width="64" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jS2-NW-wAf" firstAttribute="top" secondItem="7fH-bS-cT2" secondAttribute="bottom" constant="25" id="4dW-as-Q68"/>
                             <constraint firstItem="7fH-bS-cT2" firstAttribute="trailing" secondItem="cYw-aM-5Ii" secondAttribute="trailing" id="FnL-Un-tzH"/>
+                            <constraint firstItem="cYw-aM-5Ii" firstAttribute="bottom" secondItem="dzK-18-rpJ" secondAttribute="bottom" constant="15" id="FwQ-0r-oP3"/>
+                            <constraint firstItem="dzK-18-rpJ" firstAttribute="top" secondItem="7fH-bS-cT2" secondAttribute="bottom" constant="21" id="KE6-7c-1Dn"/>
                             <constraint firstItem="cYw-aM-5Ii" firstAttribute="bottom" secondItem="7fH-bS-cT2" secondAttribute="bottom" constant="77" id="Lqw-Kc-ciq"/>
                             <constraint firstItem="57g-bQ-fAy" firstAttribute="leading" secondItem="cYw-aM-5Ii" secondAttribute="leading" constant="78" id="SRX-wd-qc7"/>
                             <constraint firstItem="7fH-bS-cT2" firstAttribute="leading" secondItem="cYw-aM-5Ii" secondAttribute="leading" id="TGI-tw-rzH"/>
+                            <constraint firstItem="cYw-aM-5Ii" firstAttribute="trailing" secondItem="jS2-NW-wAf" secondAttribute="trailing" constant="48" id="YcB-24-Flo"/>
                             <constraint firstItem="cYw-aM-5Ii" firstAttribute="trailing" secondItem="57g-bQ-fAy" secondAttribute="trailing" constant="76" id="bjL-o4-aGH"/>
                             <constraint firstItem="57g-bQ-fAy" firstAttribute="top" secondItem="cYw-aM-5Ii" secondAttribute="top" constant="6" id="hpY-Vn-Cef"/>
                             <constraint firstItem="7fH-bS-cT2" firstAttribute="top" secondItem="57g-bQ-fAy" secondAttribute="bottom" id="nta-my-lcX"/>
+                            <constraint firstItem="dzK-18-rpJ" firstAttribute="leading" secondItem="cYw-aM-5Ii" secondAttribute="leading" constant="50" id="teN-t4-5Y3"/>
+                            <constraint firstItem="jS2-NW-wAf" firstAttribute="centerY" secondItem="dzK-18-rpJ" secondAttribute="centerY" id="uOK-gq-1GL"/>
+                            <constraint firstItem="cYw-aM-5Ii" firstAttribute="bottom" secondItem="jS2-NW-wAf" secondAttribute="bottom" constant="19" id="uxJ-nT-1HO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cYw-aM-5Ii"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的喝水歷程" id="2Yv-2G-N1h"/>
                     <connections>
                         <outlet property="calendarBaseView2" destination="7fH-bS-cT2" id="FUO-zG-mg1"/>
+                        <outlet property="howdrink" destination="jS2-NW-wAf" id="aUW-9F-Gk4"/>
                         <outlet property="label2" destination="57g-bQ-fAy" id="x9B-RK-z4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFx-i8-vrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2632.8000000000002" y="133.5832083958021"/>
-        </scene>
-        <!--喝水歷程-->
-        <scene sceneID="414-sR-4HU">
-            <objects>
-                <viewController id="im4-AC-OJP" customClass="WaterCourseViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cuE-HV-lXx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Eo1-1R-wNG"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="喝水歷程" id="xMO-Tu-O1S"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VHg-1L-iyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="830.73463268365822"/>
         </scene>
         <!--提醒喝水-->
         <scene sceneID="2dj-w9-4Tl">
@@ -122,7 +166,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HQj-TC-wyM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="99" id="jvR-gB-OwR" customClass="RemindCell" customModule="DrinkWater" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
@@ -147,6 +191,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="YTF-i3-Lml" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" id="3Z4-4B-5Mb"/>
                                                 <constraint firstItem="YTF-i3-Lml" firstAttribute="bottom" secondItem="FAP-x2-W1f" secondAttribute="bottomMargin" id="RSm-yE-Cei"/>
@@ -195,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPx-6d-UHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="1549.4752623688157"/>
+            <point key="canvasLocation" x="2615" y="823"/>
         </scene>
         <!--Set Time View Controller-->
         <scene sceneID="3qf-Gi-yJV">
@@ -213,7 +258,7 @@
                                 </date>
                             </datePicker>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="hyt-70-nnf"/>
                     </view>
                     <navigationItem key="navigationItem" id="4Lm-h4-ZLA">
@@ -229,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yob-P0-o6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3384.8000000000002" y="1548.5757121439281"/>
+            <point key="canvasLocation" x="3572" y="836"/>
         </scene>
         <!--鄰近喝水-->
         <scene sceneID="NyO-77-npQ">
@@ -259,7 +304,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15V-Hv-QRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2632.8000000000002" y="2235.832083958021"/>
+            <point key="canvasLocation" x="2796" y="1537"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bbk-ZG-C0m">
+            <objects>
+                <viewController id="ydb-F8-tcu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WlD-5C-AoZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PzO-sR-TFy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zRg-mo-5t0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtG-fg-Wof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3740" y="2230.434782608696"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dqL-Ge-KYJ">
@@ -273,20 +334,20 @@
                     </tabBar>
                     <connections>
                         <segue destination="Iym-uY-H2P" kind="relationship" relationship="viewControllers" id="QOS-i6-5LO"/>
-                        <segue destination="VSG-Zz-mm6" kind="relationship" relationship="viewControllers" id="XSN-fK-ly0"/>
                         <segue destination="4mq-rb-9Zg" kind="relationship" relationship="viewControllers" id="z9s-gr-ZSN"/>
                         <segue destination="9kC-OL-Ei1" kind="relationship" relationship="viewControllers" id="Ith-9F-dfe"/>
+                        <segue destination="Kle-Lb-v1b" kind="relationship" relationship="viewControllers" id="TJJ-LY-4qT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezb-1W-H9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
-        <!--喝呵呵-->
+        <!--Navigation Controller-->
         <scene sceneID="QFO-PF-WUI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iym-uY-H2P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="喝呵呵" id="THR-bd-gC0"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="THR-bd-gC0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="apR-XU-NVD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -301,30 +362,11 @@
             </objects>
             <point key="canvasLocation" x="900" y="134"/>
         </scene>
-        <!--喝水歷程-->
-        <scene sceneID="Pin-5U-iPs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VSG-Zz-mm6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="喝水歷程" id="mnk-uc-iDD"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9vn-cw-VZ0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="im4-AC-OJP" kind="relationship" relationship="rootViewController" id="Ma4-Z6-nfr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="srm-SJ-lTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1693.5999999999999" y="830.73463268365822"/>
-        </scene>
-        <!--提醒喝水-->
+        <!--Navigation Controller-->
         <scene sceneID="oFZ-OE-x7n">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4mq-rb-9Zg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="提醒喝水" id="4bx-Lb-H6X"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="4bx-Lb-H6X"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pdg-62-3VQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -337,7 +379,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlb-V5-wO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693.5999999999999" y="1549.4752623688157"/>
+            <point key="canvasLocation" x="1681" y="835"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KVL-wR-Uxx">
@@ -356,7 +398,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5uv-4O-XVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693.5999999999999" y="2235.832083958021"/>
+            <point key="canvasLocation" x="1836" y="1537"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a5X-h4-Wck">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kle-Lb-v1b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="sZe-HK-wri"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGK-e8-eHh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ydb-F8-tcu" kind="relationship" relationship="rootViewController" id="ZyV-d8-6Vl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDs-6F-cc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800.8000000000002" y="2230.434782608696"/>
         </scene>
     </scenes>
 </document>
