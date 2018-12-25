@@ -11,27 +11,33 @@ import CoreData
 import AMCalendar
     class CalendarViewController: UIViewController, AMCalendarRootViewControllerDelegate {
         
-        
+        let defaults = UserDefaults.standard
         @IBOutlet weak var howdrink: UILabel!
         @IBOutlet weak var label2: UILabel!
         
         
         @IBOutlet weak var calendarBaseView2: UIView!
         
-        
+        var count = 0
         var calendar2: AMCalendarRootViewController?
         
         let dateFormatter = DateFormatter()
-        
-        
+        var dateee = ""
+        let date = Date()
         override func viewDidLoad() {
             super.viewDidLoad()
-               loadfromdata()
-            let date = Date()
+            let  datecount =  defaults.dictionary(forKey: "Mydefaults") as! [String : Int]
+            
+            for item in datecount {
+                self.count = item.value
+                self.dateee = item.key
+            }
+            
             let format = DateFormatter()
             format.dateFormat = "yyyy/MM/dd"
            label2.text = format.string(from: date)
-            howdrink.text = "\(self.datevalue)cc"
+           
+            howdrink.text = "\(count)cc"
             
             calendar2 =
                 AMCalendarRootViewController.setCalendar(onView: calendarBaseView2,
@@ -41,12 +47,9 @@ import AMCalendar
       
             dateFormatter.locale = Locale(identifier: "ja_JP")
             dateFormatter.dateFormat = "yyyy/MM/dd"
-            
-       
-            
+   
         }
 
-        
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
@@ -77,47 +80,24 @@ import AMCalendar
                 let dateFormat = DateFormatter()
                 dateFormat.dateFormat = "yyyy-MM-dd"
                 
-                let datekey = dateFormatter.date(from: self.datekey)
+              let datekey = dateFormatter.date(from: dateee)
                 
                 if datekey == date{
-                    howdrink.text = "\(self.datevalue)cc"
+                    
+                    howdrink.text = "\(count)cc"
                     
                 }else{
-                        howdrink.text = "無飲水紀錄"
+                    howdrink.text = "無飲水紀錄"
                         
                     }
                 
                 
-//                if self.date?.
-//                    == date{
-//                  loadfromdata()
-//                }
-                
             }
         }
         
-        var date :[String:Int]?
-        var datekey : String = ""
-        var datevalue : Int = 0
-        func loadfromdata(){
-            do{
-                let url = URL(fileURLWithPath: NSHomeDirectory())
-                let fileurl = url.appendingPathComponent("mydata.plist")
-                let data = try Data(contentsOf: fileurl)
-                var format = PropertyListSerialization.PropertyListFormat.xml
-                let date = try (PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: &format) as? [String:Int])
-                
-                for item in date! {
-                    datekey =  item.key
-                    datevalue = item.value
-                }
-                
-                
-            }catch{
-                print("error")
-                
-            }
-            
-        }
+//        var date :[String:Int]?
+//        var datekey : String = ""
+//        var datevalue : Int = 0
+      
 
 }

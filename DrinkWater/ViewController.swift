@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+
 
 //import StoreKit
 class ViewController: UIViewController {
@@ -18,26 +18,25 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var drinkprogress: UILabel!
     @IBOutlet weak var nowtime: UILabel!
-   
+    let defaults = UserDefaults.standard
     var count = 0
    
     var pcount: Float = 0
     @IBAction func drink(_ sender: Any) {
-       
+      
         count += 200
-        let datee = dateFormatter.string(from: date)
 
-        var water = Dictionary<String,Any>()
-        water [dateFormatter.string(from: date)] = count
-
-       saveLoginData(fromPropertyListvalue: water,datakey:"mydata.plist" )
-       saveLoginData(fromPropertyListvalue: datee,datakey: "mydatadatee.plist")
-        //每次增加的量
+        let water = [dateFormatter.string(from: date): count]
         
+//會覆蓋掉前天的紀錄
+       defaults.setValue(water, forKey: "Mydefaults")
+//       saveLoginData(fromPropertyListvalue: datee,datakey: "mydatadatee.plist")
+        //每次增加的量
+        print(dateFormatter.string(from: date))
         
         //設定容量
-        if count > 1900{
-            count = 1900
+        if count > 1800{
+            count = 1800
             self.drinkprogress.text = "今日飲水已足夠"
         }else{
             self.drinkprogress.text = "\(count)cc"
@@ -50,48 +49,28 @@ class ViewController: UIViewController {
         
     }
     func loadfromdata(){
-        do{
-            let url = URL(fileURLWithPath: NSHomeDirectory())
-            let fileurl = url.appendingPathComponent("mydata.plist")
-            let data = try Data(contentsOf: fileurl)
-            var format = PropertyListSerialization.PropertyListFormat.xml
-            let date = try (PropertyListSerialization.propertyList(from: data, options: .mutableContainers, format: &format) as? [String:Int])
+
+        let date =  defaults.dictionary(forKey: "Mydefaults")
         
-            for item in date! {
-                self.count = item.value
-            }
-           
-            
-           }catch{
-            print("error")
-            
-        }
-        
-    }
-    func saveLoginData(fromPropertyListvalue:Any,datakey:String) {
-        let url = URL(fileURLWithPath: NSHomeDirectory())
-        let fileurl = url.appendingPathComponent(datakey)
-        do {
-            let datakey = try PropertyListSerialization.data(fromPropertyList: fromPropertyListvalue,format: .xml, options: 0)
-            
-            try datakey.write(to: fileurl)
-            
-        }catch{
-            print("error")
-            
+        for item in date ?? ["":0]{
+            self.count = item.value as! Int
         }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadfromdata()
+      loadfromdata()
+       
         dateFormatter.dateFormat = "yyyy/MM/dd"
         nowtime.text = dateFormatter.string(from: date)
-        
+    
         if count == 2000{
              drinkprogress.text = "今日飲水已足夠"
+        }else if count == 0{
+               drinkprogress.text = "今日尚無紀錄喝水"
         }else{
-             drinkprogress.text = "今日尚無紀錄喝水"
+          drinkprogress.text = "\(count)cc"
         }
       
        
