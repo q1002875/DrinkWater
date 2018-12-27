@@ -18,7 +18,7 @@ class SetTimeViewController: UIViewController {
     weak var delegate :SetTimeViewControllerdelegate?
     var currentTime : DrinkModel!
     @IBOutlet weak var pickdate: UIDatePicker!
-    
+     let defaults = UserDefaults.standard
     @IBAction func done(_ sender: Any) {
         let format = DateFormatter()
         format.dateFormat = "HH:mm"
@@ -33,10 +33,12 @@ class SetTimeViewController: UIViewController {
         let uuid = UUID().uuidString
         let date = pickdate.date
         let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
         let request = UNNotificationRequest(identifier:uuid, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        currentTime.saveuuid = uuid
+//        currentTime.saveuuid = uuid
+        let diction = [uuid:""]
+        defaults.setValue(diction, forKey:"UUU")
         
         
         self.delegate?.didfinishupdata(note: currentTime)
@@ -45,7 +47,7 @@ class SetTimeViewController: UIViewController {
         
     }
     
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         pickdate.datePickerMode = .time

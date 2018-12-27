@@ -13,13 +13,13 @@ protocol RemindCelldelegate {
     func didcousmtswitch(cell:RemindCell)
 }
 class RemindCell:UITableViewCell{
-   
+    
     let savetime:String = ""
     var remindtime: DrinkModel!
     @IBOutlet weak var Time: UILabel!
     var delegateswitch:RemindCelldelegate?
     @IBOutlet weak var Remid: UISwitch!
-  
+    
     @IBAction func switchchane(_ sender: UISwitch) {
         
         if sender.isOn == true{
@@ -43,35 +43,35 @@ class RemindCell:UITableViewCell{
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 let request = UNNotificationRequest(identifier:remindtime.saveuuid ?? "123", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-            
-               
-             
+                
+                
+                
             }else{
-              
+                
                 let format = DateFormatter()
                 format.dateFormat = "HH:mm"
-                    let time = self.Time.text
-                    let date = format.date(from: time!)
-                    let content = UNMutableNotificationContent()
-                    content.title = "補充水分的時間到囉!!!"
-                    content.body = ""
-                    content.sound = UNNotificationSound.defaultCritical
-                    content.badge = NSNumber(integerLiteral: UIApplication.shared.applicationIconBadgeNumber + 1)
-                    let uuid = UUID().uuidString
-                 
+                let time = self.Time.text
+                let date = format.date(from: time!)
+                let content = UNMutableNotificationContent()
+                content.title = "補充水分的時間到囉!!!"
+                content.body = ""
+                content.sound = UNNotificationSound.defaultCritical
+                content.badge = NSNumber(integerLiteral: UIApplication.shared.applicationIconBadgeNumber + 1)
+                let uuid = UUID().uuidString
+                
                 let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date ?? newdate!)
-                    let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-                    let request = UNNotificationRequest(identifier:remindtime.saveuuid ?? "123", content: content, trigger: trigger)
-                    UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-               
-               
+                let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                let request = UNNotificationRequest(identifier:remindtime.saveuuid ?? "123", content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+                
+                
             }
-    remindtime.switc = NSNumber(booleanLiteral:true)
+            remindtime.switc = NSNumber(booleanLiteral:true)
             CoreDataHelper.shared.saveContext()
         }else{
-         
-        remindtime.switc = NSNumber(booleanLiteral:false)
-        
+            
+            remindtime.switc = NSNumber(booleanLiteral:false)
+            
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
@@ -80,25 +80,25 @@ class RemindCell:UITableViewCell{
                     }
                 }
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
-        }
-        CoreDataHelper.shared.saveContext()
-        delegateswitch?.didcousmtswitch(cell: self)
+            }
+            CoreDataHelper.shared.saveContext()
+            delegateswitch?.didcousmtswitch(cell: self)
             
-    }
-    
-    
-        func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
+        }
         
- }
+        
+        func setSelected(_ selected: Bool, animated: Bool) {
+            super.setSelected(selected, animated: animated)
+        }
+        
+        
+    }
     func setProduct(drink:DrinkModel){
-     
+        
         Time.text = drink.drinktime
         Remid.isOn = drink.switc.boolValue
-
+        
     }
-
-
+    
+    
 }

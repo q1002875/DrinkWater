@@ -15,13 +15,13 @@ class DrinkModel:NSManagedObject{
      @NSManaged var datedrink:String?
     @NSManaged var datewater:NSData?
     
-    @NSManaged var saveuuid : String?
+    @NSManaged var saveuuid : String
     @NSManaged var drinktime : String?
     
     @NSManaged var switc : NSNumber
     override func awakeFromInsert() {
 //        datedrink = NSNumber(integerLiteral: 0)
-        
+//        saveuuid = UUID().uuidString
         //設定
         switc = NSNumber(booleanLiteral: true)
         //取值

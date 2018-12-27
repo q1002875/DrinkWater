@@ -56,9 +56,7 @@ class CalendarViewController: UIViewController, AMCalendarRootViewControllerDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
+
     
     func calendarRootViewController(calendarRootViewController: AMCalendarRootViewController,
                                     didSelectDate date: Date?) {
@@ -90,10 +88,5 @@ class CalendarViewController: UIViewController, AMCalendarRootViewControllerDele
             
         }
     }
-    
-    //        var date :[String:Int]?
-    //        var datekey : String = ""
-    //        var datevalue : Int = 0
-    
     
 }

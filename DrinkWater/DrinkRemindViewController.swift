@@ -13,7 +13,7 @@ import UserNotifications
 class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,UITableViewDelegate,UITableViewDataSource,RemindCelldelegate {
     
     var cellremind:DrinkModel!
-    
+    let defaults = UserDefaults.standard
     var data:[DrinkModel] = []
     func didcousmtswitch(cell: RemindCell) {
         if let indexpath = tableview.indexPath(for: cell){
@@ -47,7 +47,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         
         let moc = CoreDataHelper.shared.managedObjectContext()
         let water = DrinkModel(context: moc)
-        water.drinktime = "New Time"
+        water.drinktime = "新增提醒喝水時間"
         data.insert(water, at: 0)
         let indexpath = IndexPath(row: 0, section: 0)
         tableview.insertRows(at: [indexpath], with: .automatic)
@@ -66,19 +66,23 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     //要再修改
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            
+            var currentkey = ""
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
                     //在newtime狀態刪除會crash因為找不到identifier  待處理
-                    if notification.identifier == self.cellremind.saveuuid{
+                    let key =  self.defaults.dictionary(forKey: "UUU") as! [String:String]
+                    for item in key{
+                        
+                       currentkey = item.key
+                    }
+
+                    if notification.identifier == currentkey{
                         identifiers.append(notification.identifier)
-                    }else{
-                        identifiers.append(notification.identifier)
+                         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
                         
                     }
                 }
-                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
             }
             
             let note = data.remove(at: indexPath.row)
@@ -138,8 +142,9 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
             
             let indexpath = IndexPath(row: index, section: 0)
             
-            tableview.reloadRows(at: [indexpath], with: .automatic)
+          
             savetodata()
+              tableview.reloadRows(at: [indexpath], with: .automatic)
         }
         
         
@@ -148,7 +153,6 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         loadfromdata()
         navigationItem.leftBarButtonItem = self.editButtonItem
     }

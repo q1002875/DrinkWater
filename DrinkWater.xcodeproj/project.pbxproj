@@ -11,7 +11,6 @@
 		3A164F9A21BBC067007118A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164F9921BBC067007118A8 /* AppDelegate.swift */; };
 		3A164F9C21BBC067007118A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164F9B21BBC067007118A8 /* ViewController.swift */; };
 		3A164F9F21BBC067007118A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A164F9D21BBC067007118A8 /* Main.storyboard */; };
-		3A164FA121BBC067007118A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A164FA021BBC067007118A8 /* Assets.xcassets */; };
 		3A164FA421BBC067007118A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A164FA221BBC067007118A8 /* LaunchScreen.storyboard */; };
 		3A164FAF21BBC067007118A8 /* DrinkWaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FAE21BBC067007118A8 /* DrinkWaterTests.swift */; };
 		3A164FBA21BBC067007118A8 /* DrinkWaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A164FB921BBC067007118A8 /* DrinkWaterUITests.swift */; };
@@ -25,6 +24,8 @@
 		3AAA5B8021BCD83E00194507 /* SetTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B7F21BCD83E00194507 /* SetTimeViewController.swift */; };
 		3AAA5B8221BCDD0700194507 /* RemindCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA5B8121BCDD0700194507 /* RemindCell.swift */; };
 		3ABB8B3821BF973900534AF2 /* EGImageAnnotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB8B3721BF973900534AF2 /* EGImageAnnotionView.swift */; };
+		3AF9694021D469DA0084AB63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF9693F21D469DA0084AB63 /* Assets.xcassets */; };
+		3AF969B821D4D97A0084AB63 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF969B721D4D97A0084AB63 /* MoreViewController.swift */; };
 		68E583B8C0117165077D87EB /* Pods_DrinkWaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422826ADF694A8A60CE8BA90 /* Pods_DrinkWaterTests.framework */; };
 		C1CB52CE662455D7C3AE6998 /* Pods_DrinkWaterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE05164C4A4E19588BB67B46 /* Pods_DrinkWaterUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,7 +66,6 @@
 		3A164F9921BBC067007118A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A164F9B21BBC067007118A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A164F9E21BBC067007118A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3A164FA021BBC067007118A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A164FA321BBC067007118A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A164FA521BBC067007118A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A164FAA21BBC067007118A8 /* DrinkWaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkWaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +86,8 @@
 		3AAA5BCD21BD612900194507 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		3AAA5BCF21BD612900194507 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		3ABB8B3721BF973900534AF2 /* EGImageAnnotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EGImageAnnotionView.swift; sourceTree = "<group>"; };
+		3AF9693F21D469DA0084AB63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AF969B721D4D97A0084AB63 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		3F8F2FEE48A97FD96A9A1944 /* Pods-DrinkWaterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkWaterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkWaterUITests/Pods-DrinkWaterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		422826ADF694A8A60CE8BA90 /* Pods_DrinkWaterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrinkWaterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D485DC30B61CEAC6E239BCD /* Pods-DrinkWaterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrinkWaterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrinkWaterUITests/Pods-DrinkWaterUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,18 +155,19 @@
 				3A164F9B21BBC067007118A8 /* ViewController.swift */,
 				3A790E7C21C7DF2F00D5C9AB /* CalendarViewController.swift */,
 				3A164FC921BBC97D007118A8 /* DrinkRemindViewController.swift */,
+				3AAA5B7F21BCD83E00194507 /* SetTimeViewController.swift */,
+				3AAA5B8121BCDD0700194507 /* RemindCell.swift */,
+				3A164FCD21BBD119007118A8 /* DemoNotificationDelegate.swift */,
 				3A164FCB21BBC9A9007118A8 /* SearchDrinkViewController.swift */,
 				3ABB8B3721BF973900534AF2 /* EGImageAnnotionView.swift */,
-				3A164FCD21BBD119007118A8 /* DemoNotificationDelegate.swift */,
+				3AF969B721D4D97A0084AB63 /* MoreViewController.swift */,
 				3A164F9D21BBC067007118A8 /* Main.storyboard */,
-				3A164FA021BBC067007118A8 /* Assets.xcassets */,
 				3A164FA221BBC067007118A8 /* LaunchScreen.storyboard */,
 				3A164FA521BBC067007118A8 /* Info.plist */,
 				3AAA5B7A21BCD6AD00194507 /* CoreDataHelper.swift */,
+				3AF9693F21D469DA0084AB63 /* Assets.xcassets */,
 				3AAA5B7321BCC22D00194507 /* DrinkModel.swift */,
 				3AAA5B7C21BCD73800194507 /* WaterModel.xcdatamodeld */,
-				3AAA5B7F21BCD83E00194507 /* SetTimeViewController.swift */,
-				3AAA5B8121BCDD0700194507 /* RemindCell.swift */,
 			);
 			path = DrinkWater;
 			sourceTree = "<group>";
@@ -324,7 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A164FA421BBC067007118A8 /* LaunchScreen.storyboard in Resources */,
-				3A164FA121BBC067007118A8 /* Assets.xcassets in Resources */,
+				3AF9694021D469DA0084AB63 /* Assets.xcassets in Resources */,
 				3A164F9F21BBC067007118A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AAA5B8021BCD83E00194507 /* SetTimeViewController.swift in Sources */,
+				3AF969B821D4D97A0084AB63 /* MoreViewController.swift in Sources */,
 				3A164FCE21BBD119007118A8 /* DemoNotificationDelegate.swift in Sources */,
 				3A164FCA21BBC97D007118A8 /* DrinkRemindViewController.swift in Sources */,
 				3AAA5B7E21BCD73900194507 /* WaterModel.xcdatamodeld in Sources */,

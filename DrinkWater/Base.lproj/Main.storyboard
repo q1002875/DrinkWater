@@ -76,7 +76,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="呵喝呵" id="mz3-9G-28k">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="dmU-Ob-Prg">
+                        <barButtonItem key="rightBarButtonItem" image="icons8-calendar-50" id="dmU-Ob-Prg">
                             <connections>
                                 <segue destination="fhG-yB-qW6" kind="show" id="8Tm-Zl-LNo"/>
                             </connections>
@@ -186,7 +186,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="215" id="APs-VP-rzT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -287,6 +287,14 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mFw-xb-NmI">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rx-Da-QOY">
+                                <rect key="frame" x="250" y="504" width="152" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-near-me-filled-48"/>
+                                <connections>
+                                    <action selector="locationpoint:" destination="96S-GI-6lP" eventType="touchUpInside" id="9qv-w2-DuG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -304,16 +312,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15V-Hv-QRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="1537"/>
+            <point key="canvasLocation" x="2796" y="1535.9820089955024"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="bbk-ZG-C0m">
             <objects>
-                <viewController id="ydb-F8-tcu" sceneMemberID="viewController">
+                <viewController id="ydb-F8-tcu" customClass="MoreViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WlD-5C-AoZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-Q2-C7h">
+                                <rect key="frame" x="0.0" y="225" width="375" height="393"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="61" id="itE-XT-Jns">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="itE-XT-Jns" id="ZtI-VS-fY8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ydb-F8-tcu" id="cei-xV-Ypw"/>
+                                    <outlet property="delegate" destination="ydb-F8-tcu" id="5vi-f2-jge"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-water-filled-50" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-58-QNT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="1FF-3c-vCt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q2A-58-QNT" firstAttribute="trailing" secondItem="PzO-sR-TFy" secondAttribute="trailing" id="ScJ-qR-hBu"/>
+                            <constraint firstItem="Ph3-Q2-C7h" firstAttribute="bottom" secondItem="PzO-sR-TFy" secondAttribute="bottom" id="Uti-lk-cPT"/>
+                            <constraint firstItem="Ph3-Q2-C7h" firstAttribute="top" secondItem="Q2A-58-QNT" secondAttribute="bottom" constant="2" id="eNe-aO-Nra"/>
+                            <constraint firstItem="Q2A-58-QNT" firstAttribute="leading" secondItem="PzO-sR-TFy" secondAttribute="leading" id="en6-EU-FEf"/>
+                            <constraint firstItem="Ph3-Q2-C7h" firstAttribute="leading" secondItem="PzO-sR-TFy" secondAttribute="leading" id="j5q-zs-AUS"/>
+                            <constraint firstItem="Q2A-58-QNT" firstAttribute="top" secondItem="PzO-sR-TFy" secondAttribute="top" id="khO-Zu-NVB"/>
+                            <constraint firstItem="Ph3-Q2-C7h" firstAttribute="trailing" secondItem="PzO-sR-TFy" secondAttribute="trailing" id="sJV-3Q-ZvS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PzO-sR-TFy"/>
                     </view>
                     <navigationItem key="navigationItem" id="zRg-mo-5t0"/>
@@ -331,6 +374,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.99046948749999997" green="0.99919980760000005" blue="0.9450923188" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Iym-uY-H2P" kind="relationship" relationship="viewControllers" id="QOS-i6-5LO"/>
@@ -343,11 +387,11 @@
             </objects>
             <point key="canvasLocation" x="132" y="133.5832083958021"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--記錄喝水-->
         <scene sceneID="QFO-PF-WUI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iym-uY-H2P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="THR-bd-gC0"/>
+                    <tabBarItem key="tabBarItem" title="記錄喝水" image="icons8-water-filled-50" id="THR-bd-gC0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="apR-XU-NVD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -362,11 +406,11 @@
             </objects>
             <point key="canvasLocation" x="900" y="134"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--提醒喝水-->
         <scene sceneID="oFZ-OE-x7n">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4mq-rb-9Zg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="4bx-Lb-H6X"/>
+                    <tabBarItem key="tabBarItem" title="提醒喝水" image="icons8-alarm-50" id="4bx-Lb-H6X"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pdg-62-3VQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -381,11 +425,13 @@
             </objects>
             <point key="canvasLocation" x="1681" y="835"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--搜尋水源-->
         <scene sceneID="KVL-wR-Uxx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9kC-OL-Ei1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="VNR-14-dct"/>
+                    <tabBarItem key="tabBarItem" title="搜尋水源" image="icons8-search-50" id="VNR-14-dct">
+                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S5t-Ye-N0s">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -400,11 +446,11 @@
             </objects>
             <point key="canvasLocation" x="1836" y="1537"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--更多-->
         <scene sceneID="a5X-h4-Wck">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kle-Lb-v1b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="sZe-HK-wri"/>
+                    <tabBarItem key="tabBarItem" title="更多" image="icons8-info-50" id="sZe-HK-wri"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BGK-e8-eHh">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -420,4 +466,12 @@
             <point key="canvasLocation" x="2800.8000000000002" y="2230.434782608696"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-alarm-50" width="126" height="126"/>
+        <image name="icons8-calendar-50" width="22.5" height="22.5"/>
+        <image name="icons8-info-50" width="22.5" height="22.5"/>
+        <image name="icons8-near-me-filled-48" width="22.383419036865234" height="22.383419036865234"/>
+        <image name="icons8-search-50" width="22.5" height="22.5"/>
+        <image name="icons8-water-filled-50" width="22.5" height="22.5"/>
+    </resources>
 </document>

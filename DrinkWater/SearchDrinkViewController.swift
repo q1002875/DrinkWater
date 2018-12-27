@@ -21,6 +21,12 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     var address : [String] = []
     var drinkname : [String] = []
     var drinkpoint : [String] = []
+
+    @IBAction func locationpoint(_ sender: Any) {
+        moveAndZoomMap()
+    }
+    
+   
     
     @IBOutlet weak var mainMapView: MKMapView!
     //使用位置管理器獲取用戶位置
@@ -39,7 +45,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         //取得用戶授權
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
-        //    locationManager.allowsBackgroundLocationUpdates = true
+//          locationManager.allowsBackgroundLocationUpdates = true
 //        let user = mainMapView.userLocation.coordinate
         //開始放大地圖畫面
         let latitude :CLLocationDegrees = 24.981419
@@ -56,9 +62,19 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         let region:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
         
         mainMapView.setRegion(region, animated: true)
+         moveAndZoomMap()
         
         
-        
+    }
+    func moveAndZoomMap(){
+        guard let location = self.locationManager.location else{
+            print("Location is not ready")
+            return
+        }
+        //Move and zoom the map
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)//螢幕顯示地圖的範圍大小
+        let region = MKCoordinateRegion(center: location.coordinate, span: span)
+        self.mainMapView.setRegion(region, animated: true)
     }
     //按鈕設置
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -98,8 +114,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         
         let alert = UIAlertController(title: nil, message: "導航前往這個地點?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default){(action) in
-            
-            
+  
             let target = self.currentpoint
             self.navigate(target)
             
@@ -130,7 +145,6 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
             
             //location
             let user = self.mainMapView.userLocation.coordinate
-          
             let sourcecoordinate = CLLocationCoordinate2DMake(user.latitude,user.longitude)
             let sourdePlacemark = MKPlacemark(coordinate: sourcecoordinate)
             let sourceMapItem = MKMapItem(placemark: sourdePlacemark)
