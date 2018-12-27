@@ -25,7 +25,41 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     @IBOutlet weak var mainMapView: MKMapView!
     //使用位置管理器獲取用戶位置
     let locationManager = CLLocationManager()
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DownloadJsonAndShowAnnotations()
+        
+        mainMapView.showsUserLocation = true
+        mainMapView.delegate = self
+        
+        locationManager.delegate = self
+        
+        //最好的精確度
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //取得用戶授權
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        //    locationManager.allowsBackgroundLocationUpdates = true
+//        let user = mainMapView.userLocation.coordinate
+        //開始放大地圖畫面
+        let latitude :CLLocationDegrees = 24.981419
+        let longitude:CLLocationDegrees = 121.226977
+//        let latitude :CLLocationDegrees = user.latitude
+//        let longitude:CLLocationDegrees = user.longitude
+        let latDleta :CLLocationDegrees = 1
+        let lotDleta :CLLocationDegrees = 1
+        
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDleta, longitudeDelta: lotDleta)
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+        
+        mainMapView.setRegion(region, animated: true)
+        
+        
+        
+    }
     //按鈕設置
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -62,8 +96,6 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
     @objc func buttonTapped(sender:UIButton!)
     {
         
-        
-        
         let alert = UIAlertController(title: nil, message: "導航前往這個地點?", preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default){(action) in
             
@@ -79,7 +111,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         present(alert,animated: true)
         
     }
-    
+    //導航
     func navigate( _ target:String){
         
         let geocoder1 = CLGeocoder()
@@ -97,10 +129,9 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
             print("My Home\(coordinate.latitude),\(coordinate.longitude)")
             
             //location
-            let user = self.locationManager.location
-            let userlatitude =  user?.coordinate.latitude
-            let userlongitude = user?.coordinate.longitude
-            let sourcecoordinate = CLLocationCoordinate2DMake(userlatitude!, userlongitude!)
+            let user = self.mainMapView.userLocation.coordinate
+          
+            let sourcecoordinate = CLLocationCoordinate2DMake(user.latitude,user.longitude)
             let sourdePlacemark = MKPlacemark(coordinate: sourcecoordinate)
             let sourceMapItem = MKMapItem(placemark: sourdePlacemark)
             
@@ -116,11 +147,16 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    
+    var currentpoint :String = ""
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation?.subtitle {
+            currentpoint = annotation ?? ""
+        }
+    }
+    
+    func DownloadJsonAndShowAnnotations(){
         if let url = URL(string: "http://opendata.hccg.gov.tw/dataset/64cb7d6d-692e-4312-a4a5-931b902680d5/resource/9fcbba71-4e28-47c3-8d29-6e85c24e3415/download/20171206102431392.json"){
-            
             let session = URLSession.shared
             let request = URLRequest(url:url)
             let task = session.dataTask(with: request) { (data, response, error) in
@@ -154,8 +190,8 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
                                     // 顯示標註
                                     annotation.coordinate = location.coordinate
                                     //存到一個地方再一次show
-                                    self.mainMapView.showAnnotations([annotation], animated: true)
-                                    self.mainMapView.selectAnnotation(annotation, animated: true)   
+                                    self.mainMapView.addAnnotation(annotation)
+//                                    self.mainMapView.selectAnnotation(annotation, animated: true)
                                 }
                             }
                         })
@@ -169,49 +205,8 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
             task.resume()
         }
         
-        
     }
     
-    var currentpoint :String = ""
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        if let annotation = view.annotation?.subtitle {
-            currentpoint = annotation!
-        }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        mainMapView.showsUserLocation = true
-        mainMapView.delegate = self
-        
-        locationManager.delegate = self
-        
-        //最好的精確度
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //取得用戶授權
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-    //    locationManager.allowsBackgroundLocationUpdates = true
-        
-        //開始放大地圖畫面
-        let latitude :CLLocationDegrees = 23.702290
-        let longitude:CLLocationDegrees = 120.537034
-        
-        let latDleta :CLLocationDegrees = 0.5
-        let lotDleta :CLLocationDegrees = 0.5
-        
-        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: latDleta, longitudeDelta: lotDleta)
-        
-        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        let region:MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
-        
-        mainMapView.setRegion(region, animated: true)
-        
-        
-        
-    }
     
     
 }

@@ -20,17 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var nowtime: UILabel!
     let defaults = UserDefaults.standard
     var count = 0
-   
+    
     var pcount: Float = 0
     @IBAction func drink(_ sender: Any) {
-      
+        
         count += 200
-
+        
         let water = [dateFormatter.string(from: date): count]
         
-//會覆蓋掉前天的紀錄
-       defaults.setValue(water, forKey: "Mydefaults")
-//       saveLoginData(fromPropertyListvalue: datee,datakey: "mydatadatee.plist")
+        //會覆蓋掉前天的紀錄
+        defaults.setValue(water, forKey: dateFormatter.string(from: date))
+        //       saveLoginData(fromPropertyListvalue: datee,datakey: "mydatadatee.plist")
         //每次增加的量
         print(dateFormatter.string(from: date))
         
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             count = 1800
             self.drinkprogress.text = "今日飲水已足夠"
         }else{
-            self.drinkprogress.text = "\(count)cc"
+            self.drinkprogress.text = "現階段喝水\(count)cc"
         }
         
         pcount += 0.1
@@ -49,33 +49,34 @@ class ViewController: UIViewController {
         
     }
     func loadfromdata(){
-
-        let date =  defaults.dictionary(forKey: "Mydefaults")
+          dateFormatter.dateFormat = "yyyy/MM/dd"
+        let date =  defaults.dictionary(forKey: dateFormatter.string(from: self.date))
         
         for item in date ?? ["":0]{
+            
             self.count = item.value as! Int
         }
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      loadfromdata()
-       
+        loadfromdata()
+        
         dateFormatter.dateFormat = "yyyy/MM/dd"
         nowtime.text = dateFormatter.string(from: date)
-    
+        
         if count == 2000{
-             drinkprogress.text = "今日飲水已足夠"
+            drinkprogress.text = "今日飲水已足夠"
         }else if count == 0{
-               drinkprogress.text = "今日尚無紀錄喝水"
+            drinkprogress.text = "今日尚無紀錄喝水"
         }else{
-          drinkprogress.text = "\(count)cc"
+            drinkprogress.text = "現階段喝水\(count)cc"
         }
-      
-       
+        
+        
     }
     
 }
-    
+
 
