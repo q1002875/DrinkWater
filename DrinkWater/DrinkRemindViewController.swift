@@ -12,6 +12,7 @@ import CoreData
 import UserNotifications
 class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,UITableViewDelegate,UITableViewDataSource,RemindCelldelegate {
     
+
     var cellremind:DrinkModel!
     let defaults = UserDefaults.standard
     var data:[DrinkModel] = []
@@ -29,7 +30,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RemindCell
         //位置
-      
+     
         cell.remindtime = data[indexPath.row]
         data[indexPath.row].switc = cell.remindtime.switc
         let product = data[indexPath.row]
@@ -47,12 +48,16 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         
         let moc = CoreDataHelper.shared.managedObjectContext()
         let water = DrinkModel(context: moc)
-        water.drinktime = "新增提醒喝水時間"
+        water.drinktime = "新增提醒"
         data.insert(water, at: 0)
         let indexpath = IndexPath(row: 0, section: 0)
         tableview.insertRows(at: [indexpath], with: .automatic)
         water.switc = true
         savetodata()
+//        if let controller = storyboard?.instantiateViewController(withIdentifier: "remind") {
+//            present(controller, animated: true, completion: nil)
+//        }
+        
     }
     
     
@@ -155,6 +160,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         super.viewDidLoad()
         loadfromdata()
         navigationItem.leftBarButtonItem = self.editButtonItem
+      
     }
     
     

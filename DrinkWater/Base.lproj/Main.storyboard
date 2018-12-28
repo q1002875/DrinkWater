@@ -17,15 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-Po-svF">
-                                <rect key="frame" x="36" y="172" width="295" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="152" id="y4v-Lm-m72"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NB-FK-2xU">
                                 <rect key="frame" x="146" y="530" width="83" height="45"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
@@ -36,10 +27,6 @@
                                     <action selector="drink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZi-6t-Hxs"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Cc-O4-vJo">
-                                <rect key="frame" x="71" y="461" width="242" height="2"/>
-                                <color key="progressTintColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-Oi-cmt">
                                 <rect key="frame" x="85" y="339" width="205" height="95"/>
                                 <constraints>
@@ -50,26 +37,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="每天十杯水" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBk-PG-0Dn">
-                                <rect key="frame" x="130" y="86" width="114" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7m-Po-svF">
+                                <rect key="frame" x="44" y="96" width="287" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="y4v-Lm-m72"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9NB-FK-2xU" firstAttribute="top" secondItem="7Cc-O4-vJo" secondAttribute="bottom" constant="28" id="69H-JG-dQM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y7m-Po-svF" secondAttribute="trailing" constant="44" id="GzC-qv-8E4"/>
                             <constraint firstItem="9NB-FK-2xU" firstAttribute="centerX" secondItem="y7m-Po-svF" secondAttribute="centerX" id="JrG-0J-gDa"/>
+                            <constraint firstItem="9NB-FK-2xU" firstAttribute="top" secondItem="zMF-Oi-cmt" secondAttribute="bottom" constant="96" id="Okb-R2-eP3"/>
                             <constraint firstItem="zMF-Oi-cmt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="aea-0C-pPm"/>
-                            <constraint firstItem="7Cc-O4-vJo" firstAttribute="top" secondItem="zMF-Oi-cmt" secondAttribute="bottom" constant="66" id="cab-I8-WUT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMF-Oi-cmt" secondAttribute="trailing" constant="85" id="dIg-EY-8fF"/>
                             <constraint firstItem="y7m-Po-svF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="ee5-ZZ-V1G"/>
                             <constraint firstItem="zMF-Oi-cmt" firstAttribute="centerX" secondItem="y7m-Po-svF" secondAttribute="centerX" id="jLp-9R-C16"/>
-                            <constraint firstItem="7Cc-O4-vJo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="nJE-Rz-89j"/>
-                            <constraint firstItem="7Cc-O4-vJo" firstAttribute="centerX" secondItem="y7m-Po-svF" secondAttribute="centerX" id="wXc-ot-5Vm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9NB-FK-2xU" secondAttribute="bottom" constant="43" id="wr5-9K-2PK"/>
                             <constraint firstItem="y7m-Po-svF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="xVh-Q4-lau"/>
                         </constraints>
@@ -85,7 +71,6 @@
                     <connections>
                         <outlet property="drinkprogress" destination="zMF-Oi-cmt" id="Zwg-G0-ylx"/>
                         <outlet property="nowtime" destination="y7m-Po-svF" id="Ghr-9G-cg0"/>
-                        <outlet property="progress" destination="7Cc-O4-vJo" id="xe6-W5-yRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -177,33 +162,73 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1dB-bb-F1P">
                                                     <rect key="frame" x="301" y="39" width="51" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="Di0-Ns-igX"/>
+                                                        <constraint firstAttribute="height" constant="21" id="ejx-kd-xkh"/>
+                                                    </constraints>
                                                     <connections>
                                                         <action selector="switchchane:" destination="jvR-gB-OwR" eventType="valueChanged" id="XTi-W7-e4e"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTF-i3-Lml">
-                                                    <rect key="frame" x="15" y="11" width="215" height="77"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提醒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyA-k2-KXt">
+                                                    <rect key="frame" x="15" y="18" width="69" height="26"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="215" id="APs-VP-rzT"/>
+                                                        <constraint firstAttribute="height" constant="26" id="F2I-oU-Q6A"/>
+                                                        <constraint firstAttribute="width" constant="69" id="ZgL-N5-FX9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ck-pt-6HQ">
+                                                    <rect key="frame" x="15" y="52" width="69" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="hPl-oz-mSc"/>
+                                                        <constraint firstAttribute="width" constant="69" id="w4Q-eo-aXQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTF-i3-Lml">
+                                                    <rect key="frame" x="144" y="11" width="149" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="77" id="0kX-3d-HqG"/>
+                                                        <constraint firstAttribute="width" constant="215" id="APs-VP-rzT"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="gKV-bF-93z"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-alarm-clock-80" translatesAutoresizingMaskIntoConstraints="NO" id="56K-zo-lwX">
+                                                    <rect key="frame" x="83" y="18" width="63" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="63" id="oB7-yB-V5N"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstItem="OyA-k2-KXt" firstAttribute="leading" secondItem="FAP-x2-W1f" secondAttribute="leadingMargin" id="0WX-Rk-chp"/>
                                                 <constraint firstItem="YTF-i3-Lml" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" id="3Z4-4B-5Mb"/>
+                                                <constraint firstItem="YTF-i3-Lml" firstAttribute="leading" secondItem="OyA-k2-KXt" secondAttribute="trailing" constant="33" id="A4g-pM-8Ox"/>
+                                                <constraint firstItem="OyA-k2-KXt" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" constant="7" id="Ega-nP-tKG"/>
                                                 <constraint firstItem="YTF-i3-Lml" firstAttribute="bottom" secondItem="FAP-x2-W1f" secondAttribute="bottomMargin" id="RSm-yE-Cei"/>
+                                                <constraint firstItem="56K-zo-lwX" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" constant="7" id="Ugt-fr-PPv"/>
                                                 <constraint firstItem="1dB-bb-F1P" firstAttribute="top" secondItem="FAP-x2-W1f" secondAttribute="topMargin" constant="28" id="VxB-fA-VQc"/>
+                                                <constraint firstItem="56K-zo-lwX" firstAttribute="leading" secondItem="FAP-x2-W1f" secondAttribute="leadingMargin" constant="68" id="Zdh-9e-PaV"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="1dB-bb-F1P" secondAttribute="bottom" constant="28" id="fq9-rP-UDO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6ck-pt-6HQ" secondAttribute="bottom" constant="10" id="jIK-Ba-hyB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="1dB-bb-F1P" secondAttribute="trailing" constant="10" id="jO9-eo-gol"/>
-                                                <constraint firstItem="YTF-i3-Lml" firstAttribute="leading" secondItem="FAP-x2-W1f" secondAttribute="leadingMargin" id="pay-a2-7mb"/>
+                                                <constraint firstItem="6ck-pt-6HQ" firstAttribute="leading" secondItem="FAP-x2-W1f" secondAttribute="leadingMargin" id="js4-HA-jtd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="56K-zo-lwX" secondAttribute="bottom" constant="10" id="yff-YZ-U0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="Remid" destination="1dB-bb-F1P" id="GCj-nf-pqJ"/>
                                             <outlet property="Time" destination="YTF-i3-Lml" id="HPY-57-Aan"/>
+                                            <outlet property="remindText" destination="OyA-k2-KXt" id="x2h-t2-Lct"/>
                                             <segue destination="nzi-wT-QTC" kind="show" identifier="show" id="qjE-7v-e9Y"/>
                                         </connections>
                                     </tableViewCell>
@@ -240,12 +265,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fPx-6d-UHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2615" y="823"/>
+            <point key="canvasLocation" x="2613.5999999999999" y="821.73913043478262"/>
         </scene>
         <!--Set Time View Controller-->
         <scene sceneID="3qf-Gi-yJV">
             <objects>
-                <viewController id="nzi-wT-QTC" customClass="SetTimeViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="remind" id="nzi-wT-QTC" customClass="SetTimeViewController" customModule="DrinkWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qxt-vb-iCG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,6 +493,7 @@
     </scenes>
     <resources>
         <image name="icons8-alarm-50" width="126" height="126"/>
+        <image name="icons8-alarm-clock-80" width="60" height="60"/>
         <image name="icons8-calendar-50" width="22.5" height="22.5"/>
         <image name="icons8-info-50" width="22.5" height="22.5"/>
         <image name="icons8-near-me-filled-48" width="22.383419036865234" height="22.383419036865234"/>

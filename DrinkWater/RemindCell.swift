@@ -14,6 +14,7 @@ protocol RemindCelldelegate {
 }
 class RemindCell:UITableViewCell{
     
+    @IBOutlet weak var remindText: UILabel!
     let savetime:String = ""
     var remindtime: DrinkModel!
     @IBOutlet weak var Time: UILabel!
