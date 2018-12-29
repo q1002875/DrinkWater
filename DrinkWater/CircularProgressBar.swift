@@ -74,7 +74,7 @@ public class CircularProgressBar: CALayer {
         completedLabel.center = position
         completedLabel.center.y = position.y + 20
         completedLabel.textColor = .white
-        completedLabel.text = "今日達標"
+        completedLabel.text = ""
         insertSublayer(completedLabel.layer, at: 0)
         
     }

@@ -68,10 +68,11 @@ class ViewController: UIViewController {
     }
     
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         loadfromdata()
-        
+//        navigationController?.navigationBar.isHidden = true
         dateFormatter.dateFormat = "yyyy/MM/dd"
         nowtime.text = dateFormatter.string(from: date)
         
@@ -87,7 +88,7 @@ class ViewController: UIViewController {
         
         let xPosition = view.center.x
         let yPosition = view.center.y
-        let position = CGPoint(x: xPosition , y: yPosition - 120 )
+        let position = CGPoint(x: xPosition , y: yPosition - 60 )
         
         progressRing = CircularProgressBar(radius: 100, position: position, innerTrackColor: .defaultInnerColor, outerTrackColor: .defaultOuterColor, lineWidth: 20)
         view.layer.addSublayer(progressRing)
