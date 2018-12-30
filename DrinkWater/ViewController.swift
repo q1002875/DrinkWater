@@ -51,12 +51,24 @@ class ViewController: UIViewController {
             self.drinkprogress.text = "現階段喝水\(count)cc"
         }
         
-//        pcount += 0.1
-//        progress.setProgress(pcount, animated: true)
-//
-//        self.view.addSubview(progress)
-        
     }
+    
+    
+    @IBAction func cowater(_ sender: Any) {
+        count -= 200
+        progressRing.progress = CGFloat(count)
+        
+        
+        if count <= 200 {
+            count = 0
+        }
+            self.drinkprogress.text = "現階段喝水\(count)cc"
+        let water = [dateFormatter.string(from: date): count]
+        
+        //會覆蓋掉前天的紀錄
+        defaults.setValue(water, forKey: dateFormatter.string(from: date))
+    }
+    
     func loadfromdata(){
           dateFormatter.dateFormat = "yyyy/MM/dd"
         let date =  defaults.dictionary(forKey: dateFormatter.string(from: self.date))

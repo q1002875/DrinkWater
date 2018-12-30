@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notificationDelegate = DemoNotificationDelegate()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         //消除通知數
-        UIApplication.shared.applicationIconBadgeNumber = 0
+//         UIApplication.shared.applicationIconBadgeNumber = 0
    print(NSHomeDirectory())
-           Fabric.with([Crashlytics.self])
+        Fabric.with([Crashlytics.self])
         center.delegate = notificationDelegate
         // MARK: set authorization
         let options: UNAuthorizationOptions = [.badge, .sound, .alert]

@@ -71,17 +71,10 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     //要再修改
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            var currentkey = ""
+            let currentkey = data[indexPath.row].drinktime
             UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
                 var identifiers: [String] = []
                 for notification:UNNotificationRequest in notificationRequests {
-                    //在newtime狀態刪除會crash因為找不到identifier  待處理
-                    let key =  self.defaults.dictionary(forKey: "UUU") as! [String:String]
-                    for item in key{
-                        
-                       currentkey = item.key
-                    }
-
                     if notification.identifier == currentkey{
                         identifiers.append(notification.identifier)
                          UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)

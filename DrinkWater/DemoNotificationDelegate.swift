@@ -33,7 +33,7 @@ class DemoNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
             print("Snooze")
             let identifier = "SnoozeNotification"
             let content = response.notification.request.content
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
             let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
             center.add(request, withCompletionHandler: {(error) in
                 if let error = error {
@@ -44,7 +44,7 @@ class DemoNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
             })
             
         case "DeleteAction":
-            print("Delete")
+            UIApplication.shared.applicationIconBadgeNumber = 0
         default:
             print("Unknown action")
         }
