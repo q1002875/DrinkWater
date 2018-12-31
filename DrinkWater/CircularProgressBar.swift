@@ -20,9 +20,21 @@ public class CircularProgressBar: CALayer {
     public var isUsingAnimation: Bool!
     public var progress: CGFloat = 0 {
         didSet {
+            
             progressLabel.text = "\(progress/20)%"
+            print("\(progress/20)%")
+            
+            if progress/20 == -5.0 {
+                progressLabel.text = "0.0%"
+            }
+            if progress/20 == -10.0 {
+                progressLabel.text = "0.0%"
+            }
+           
+            
+            
             innerTrackShapeLayer.strokeEnd = progress / 2000
-            if progress > 1800 {
+            if progress >= 2000 {
                 progressLabel.text = "100%"
             }
         }

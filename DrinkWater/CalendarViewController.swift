@@ -39,7 +39,7 @@ class CalendarViewController: UIViewController, AMCalendarRootViewControllerDele
        
 //        label2.text = format.string(from: date)
         
-        howdrink.text = "\(count)cc"
+        howdrink.text = "\(count)c.c"
         
         calendar2 =
             AMCalendarRootViewController.setCalendar(onView: calendarBaseView2,
@@ -75,7 +75,7 @@ class CalendarViewController: UIViewController, AMCalendarRootViewControllerDele
                 if  let  datecount =  defaults.dictionary(forKey: datt) as? [String : Int]{
                     for item in datecount {
                         self.count = item.value
-                        howdrink.text = "\(count)cc"
+                        howdrink.text = "\(count)c.c"
                     }
                     
                 }else{
