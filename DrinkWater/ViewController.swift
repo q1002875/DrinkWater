@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         }else if count == 0{
             drinkprogress.text = "今日尚無紀錄喝水"
         }else{
-            drinkprogress.text = "現階段喝水\(Int(count))cc"
+            drinkprogress.text = "現階段喝水[\(Int(count))c.c]"
         }
         
         let xPosition = view.center.x
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
             self.defaults.setValue(self.water, forKey: self.dateFormatter.string(from: self.date))
             
             if self.count <= 2000{
-                  self.drinkprogress.text = "現階段喝水\(Int(self.count))c.c"
+                  self.drinkprogress.text = "現階段喝水[\(Int(self.count))c.c]"
                 
             }else{
                   self.drinkprogress.text = "今日飲水\(Int(self.count))c.c已足夠"
@@ -101,6 +101,13 @@ class ViewController: UIViewController {
         }
         drinkwater.setValue(UIImage(named:imagename), forKey: "image")
       
+        if self.count >= 2000 {
+            let alert = UIAlertController(title: "恭喜達成今日2000c.c目標", message: "繼續保持歐", preferredStyle:.alert)
+            let sure = UIAlertAction(title: "確認", style: .default)
+            alert.addAction(sure)
+            self.present(alert, animated: true, completion: nil)
+        }
+        
         return drinkwater
     }
     
@@ -117,7 +124,7 @@ class ViewController: UIViewController {
             
             self.water = [self.dateFormatter.string(from: self.date): self.count]
             self.defaults.setValue(self.water, forKey: self.dateFormatter.string(from: self.date))
-            self.drinkprogress.text = "現階段喝水\(Int(self.count))cc"
+            self.drinkprogress.text = "現階段喝水[\(Int(self.count))cc]"
         }
         let deleteTwohunder = UIAlertAction(title: "刪除飲水200c.c", style: .destructive) { (UIAlertAction) in
             self.count -= 200
@@ -129,7 +136,7 @@ class ViewController: UIViewController {
             
             self.water = [self.dateFormatter.string(from: self.date): self.count]
             self.defaults.setValue(self.water, forKey: self.dateFormatter.string(from: self.date))
-            self.drinkprogress.text = "現階段喝水\(Int(self.count))cc"
+            self.drinkprogress.text = "現階段喝水[\(Int(self.count))cc]"
         }
         let deleteZero = UIAlertAction(title: "飲水c.c數歸零", style: .destructive) { (UIAlertAction) in
             self.count = 0
@@ -141,7 +148,7 @@ class ViewController: UIViewController {
             
             self.water = [self.dateFormatter.string(from: self.date): self.count]
             self.defaults.setValue(self.water, forKey: self.dateFormatter.string(from: self.date))
-            self.drinkprogress.text = "現階段喝水\(Int(self.count))cc"
+            self.drinkprogress.text = "現階段喝水[\(Int(self.count))c.c]"
             
             
         }

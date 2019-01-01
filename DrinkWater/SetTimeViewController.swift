@@ -154,9 +154,7 @@ extension SetTimeViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
-            
-            
-            
+     
             if   tableViewData[indexPath.section].isopen == true{
                 tableViewData[indexPath.section].isopen = false
                 let indexes =  IndexSet(integer: indexPath.section)

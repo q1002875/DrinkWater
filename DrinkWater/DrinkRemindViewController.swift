@@ -12,7 +12,7 @@ import CoreData
 import UserNotifications
 class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,UITableViewDelegate,UITableViewDataSource,RemindCelldelegate {
     
-
+    
     var cellremind:DrinkModel!
     let defaults = UserDefaults.standard
     var data:[DrinkModel] = []
@@ -30,7 +30,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! RemindCell
         //位置
-     
+        
         cell.remindtime = data[indexPath.row]
         data[indexPath.row].switc = cell.remindtime.switc
         let product = data[indexPath.row]
@@ -51,13 +51,10 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         water.drinktime = "新增提醒"
         data.insert(water, at: 0)
         let indexpath = IndexPath(row: 0, section: 0)
-        tableview.insertRows(at: [indexpath], with: .automatic)
+     
         water.switc = true
         savetodata()
-//        if let controller = storyboard?.instantiateViewController(withIdentifier: "remind") {
-//            present(controller, animated: true, completion: nil)
-//        }
-        
+       tableview.insertRows(at: [indexpath], with: .automatic)
     }
     
     
@@ -71,26 +68,28 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
     //要再修改
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            let currentkey = data[indexPath.row].drinktime
-            UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
-                var identifiers: [String] = []
-                for notification:UNNotificationRequest in notificationRequests {
-                    if notification.identifier == currentkey{
-                        identifiers.append(notification.identifier)
-                         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
-                        
+            if let currentkey = data[indexPath.row].drinktime{
+                UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+                    var identifiers: [String] = []
+                    for notification:UNNotificationRequest in notificationRequests {
+                        if notification.identifier == currentkey{
+                            identifiers.append(notification.identifier)
+                            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+                            
+                        }
                     }
                 }
             }
-            
             let note = data.remove(at: indexPath.row)
             CoreDataHelper.shared.managedObjectContext().delete(note)
-            let indexpath = IndexPath(row:indexPath.row , section: 0)
-            tableview.deleteRows(at: [indexpath], with: .automatic)
+ 
+           
             savetodata()
-            
-            
+         
+            tableview.deleteRows(at: [indexPath], with: .automatic)
+     
         }
+      
     }
     
     func savetodata(){
@@ -114,9 +113,26 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         
         
     }
-    
-    
-    
+    func controller(controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch type {
+        case .Insert: tableview.insertRows(at: [newIndexPath! as IndexPath], with: UITableView.RowAnimation.fade)
+        case .Delete:  if indexPath != newIndexPath {
+            tableview.deleteRows(at: [indexPath! as IndexPath], with: .fade)
+//            tableview.insertRows(at: [newIndexPath! as IndexPath], with: .fade)
+            }
+        case .Update: tableview.reloadRows(at: [indexPath! as IndexPath], with: UITableView.RowAnimation.none)
+        case .Move:  if indexPath != newIndexPath {
+            tableview.deleteRows(at: [indexPath! as IndexPath], with: .fade)
+            tableview.insertRows(at: [newIndexPath! as IndexPath], with: .fade)
+            }
+        }
+    }
+    public enum NSFetchedResultsChangeType : UInt {
+        case Insert // 1
+        case Delete // 2
+        case Move   // 3
+        case Update // 4
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show"{
             if let whater = segue.destination as? SetTimeViewController {
@@ -125,7 +141,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
                     whater.currentTime = data[indexpath.row]
                     
                     whater.delegate = self
-                   
+                    
                 }
                 
             }
@@ -140,20 +156,21 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
             
             let indexpath = IndexPath(row: index, section: 0)
             
-          
             savetodata()
-              tableview.reloadRows(at: [indexpath], with: .automatic)
+           tableview.reloadRows(at: [indexpath], with: .automatic)
+           
         }
         
-        
+       
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableview.reloadData()
         loadfromdata()
         navigationItem.leftBarButtonItem = self.editButtonItem
-      
+        
     }
     
     

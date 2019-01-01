@@ -55,11 +55,11 @@ extension MoreViewController:UITableViewDataSource,UITableViewDelegate,MFMailCom
             }
             if indexPath.row == 1{
                 
-//                let appleID = "123"
-//                let appURL = URL(string: "")
-//                UIApplication.shared.open(appURL!, options: [:]) { (success) in
+                let appleID = "1448202495"
+                let appURL = URL(string: "https://itunes.apple.com/us/app/itunes-u/id\(appleID)?action=write-review")
+                UIApplication.shared.open(appURL!, options: [:]) { (success) in
                 
-//                }
+                }
                 
             }
             
