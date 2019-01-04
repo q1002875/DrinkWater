@@ -35,7 +35,7 @@ class RemindCell:UITableViewCell{
                 let content = UNMutableNotificationContent()
                 content.title = "補充水分的時間到囉!!!"
                 content.body = ""
-                content.sound = UNNotificationSound.defaultCritical
+                content.sound = UNNotificationSound.default
                 let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date ?? newdate!)
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 let request = UNNotificationRequest(identifier:remindtime.drinktime ?? "123", content: content, trigger: trigger)
@@ -50,7 +50,7 @@ class RemindCell:UITableViewCell{
                 let content = UNMutableNotificationContent()
                 content.title = "補充水分的時間到囉!!!"
                 content.body = ""
-                content.sound = UNNotificationSound.defaultCritical
+                content.sound = UNNotificationSound.default
                 let triggerDate = Calendar.current.dateComponents([ .hour, .minute,], from: date ?? newdate!)
                 let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 let request = UNNotificationRequest(identifier:remindtime.drinktime ?? "123", content: content, trigger: trigger)

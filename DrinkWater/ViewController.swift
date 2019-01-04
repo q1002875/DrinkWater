@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-//import StoreKit
 class ViewController: UIViewController {
     
     
@@ -17,8 +15,6 @@ class ViewController: UIViewController {
     
     var date = Date()
     let dateFormatter : DateFormatter = DateFormatter()
-    
-    //    @IBOutlet weak var progress: UIProgressView!
     
     @IBOutlet weak var drinkprogress: UILabel!
     @IBOutlet weak var nowtime: UILabel!
@@ -30,7 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         water = [dateFormatter.string(from:date): count]
         loadfromdata()
-        //        navigationController?.navigationBar.isHidden = true
         dateFormatter.dateFormat = "yyyy年MM月dd日"
         nowtime.text = dateFormatter.string(from: date)
         dateFormatter.dateFormat = "yyyy/MM/dd"
@@ -63,8 +58,7 @@ class ViewController: UIViewController {
     
     @IBAction func drink(_ sender: Any) {
         DrinkHowMany()
-        
-        
+  
     }
     
   

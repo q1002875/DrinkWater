@@ -76,7 +76,7 @@ class SetTimeViewController: UIViewController {
             let content = UNMutableNotificationContent()
             content.title = "補充水分的時間到囉!!!"
             content.body = ""
-            content.sound = UNNotificationSound.defaultCritical
+            content.sound = UNNotificationSound.default
 //            content.badge = NSNumber(integerLiteral: UIApplication.shared.applicationIconBadgeNumber + 1)
             content.launchImageName = ""
             content.categoryIdentifier = "DemoNotificationCategory"

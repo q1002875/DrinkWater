@@ -149,7 +149,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
             let sourdePlacemark = MKPlacemark(coordinate: sourcecoordinate)
             let sourceMapItem = MKMapItem(placemark: sourdePlacemark)
 
-            //prepare taarget map item導航
+            //prepare target map item導航
             let targetPlacemark = MKPlacemark(placemark: placemark)
             let targetMapItem = MKMapItem(placemark: targetPlacemark)
             //設為步行driving
@@ -192,6 +192,7 @@ class SearchDrinkViewController: UIViewController,MKMapViewDelegate,CLLocationMa
                                 print("\(String(describing: error))")
                                 return
                             }
+                            
                             if let placemarks = placemarks {
                                 // 取得第一個座標
                                 let placemark = placemarks[0]

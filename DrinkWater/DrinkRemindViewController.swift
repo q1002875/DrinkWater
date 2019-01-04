@@ -50,11 +50,10 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         let water = DrinkModel(context: moc)
         water.drinktime = "新增提醒"
         data.insert(water, at: 0)
-        let indexpath = IndexPath(row: 0, section: 0)
-     
         water.switc = true
         savetodata()
-       tableview.insertRows(at: [indexpath], with: .automatic)
+        tableview.reloadData()
+
     }
     
     
@@ -82,12 +81,10 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
             }
             let note = data.remove(at: indexPath.row)
             CoreDataHelper.shared.managedObjectContext().delete(note)
- 
-           
             savetodata()
+            
+          tableView.reloadData()
          
-            tableview.deleteRows(at: [indexPath], with: .automatic)
-     
         }
       
     }
@@ -113,26 +110,7 @@ class DrinkRemindViewController: UIViewController,SetTimeViewControllerdelegate,
         
         
     }
-    func controller(controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
-        switch type {
-        case .Insert: tableview.insertRows(at: [newIndexPath! as IndexPath], with: UITableView.RowAnimation.fade)
-        case .Delete:  if indexPath != newIndexPath {
-            tableview.deleteRows(at: [indexPath! as IndexPath], with: .fade)
-//            tableview.insertRows(at: [newIndexPath! as IndexPath], with: .fade)
-            }
-        case .Update: tableview.reloadRows(at: [indexPath! as IndexPath], with: UITableView.RowAnimation.none)
-        case .Move:  if indexPath != newIndexPath {
-            tableview.deleteRows(at: [indexPath! as IndexPath], with: .fade)
-            tableview.insertRows(at: [newIndexPath! as IndexPath], with: .fade)
-            }
-        }
-    }
-    public enum NSFetchedResultsChangeType : UInt {
-        case Insert // 1
-        case Delete // 2
-        case Move   // 3
-        case Update // 4
-    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "show"{
             if let whater = segue.destination as? SetTimeViewController {
